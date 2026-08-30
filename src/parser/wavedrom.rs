@@ -8,7 +8,7 @@ use crate::{
 use serde_json::{Map, Value};
 
 pub(crate) fn parse(source: &str) -> ParseResult<WaveDromDocument> {
-    let value: Value = json5::from_str(source).map_err(|error| {
+    let value: Value = serde_json5::from_str(source).map_err(|error| {
         ParseError::new(
             Format::WaveDrom,
             format!("invalid WaveJSON/JSON5: {error}"),
