@@ -1,0 +1,101 @@
+{
+  "kind": "deviation_disclosures",
+  "items": [
+    {
+      "id": "D01",
+      "title": "重建层的环境归一化（路径烧录）",
+      "body": "重建链在 /tmp 工作拷贝中构建与探测（引擎仓对树外只读）。重建层产物（data/rebuild/*.json、面板、页面）不含任何绝对路径、时间戳或工具版本串：探测只落 rc/字节/哈希/结构化 JSON；页面与面板数字全部来自冻结/重建证据。若未来某证据字段需要携带路径，必须以 <WORK>/<build-dir>/<ts> 占位符归一化后在 README 写明——当前没有任何字段需要。",
+      "anchor": "tools/probe_behavior.py + data/rebuild/behavior.json"
+    },
+    {
+      "id": "D02",
+      "title": "一次性冻结不重测",
+      "body": "冷构建耗时、测试耗时、测试计数、二进制尺寸、7 份 AST 输出及其哈希、错误演示退出码均为一次性实测，冻结后绝不重测覆盖（freeze_once.sh 有一次性守卫）。真空复跑不重建 data/frozen/；页面引用这些数字时以冻结层为准。",
+      "anchor": "data/frozen/build-summary.json + tools/freeze_once.sh"
+    },
+    {
+      "id": "D03",
+      "title": "构建器与工具链事实",
+      "body": "冻结与重建使用 Homebrew cargo/rustc 1.98.0（macOS arm64），忽略仓库的 stable 通道声明文件；仓库声明的最低 Rust 版本为 1.85。依赖在 Cargo.lock 全量锁版且走 --offline 离线构建（注册表缓存命中，无需联网）。若换机器重跑，工具链版本可能不同：AST 输出为确定性的结构序列化，哈希不随编译器版本漂移，但冻结层的耗时/尺寸数字只对冻结环境成立。",
+      "anchor": "data/frozen/manifest.txt"
+    },
+    {
+      "id": "D04",
+      "title": "兼容矩阵为引擎 README 的中文意译",
+      "body": "p7 面板的「已实现/有意推迟」条目是引擎 README 兼容性矩阵的中文意译（属引擎自述事实，非本方实测）；措辞经意译以避免逐字摘录，语义忠实原表。实测部分（计数/退出码/指纹）与该矩阵分开呈现。",
+      "anchor": "data/rebuild/compat.json + tools/export_static.py"
+    },
+    {
+      "id": "D05",
+      "title": "auto 触发条件为源码逻辑的中文概括",
+      "body": "p5 面板各级触发条件是引擎格式识别函数逻辑的中文概括（关键词为公开 DSL 关键字）；判定矩阵（fixture→识别结果）为重建二进制真实重放实测，7/7 与冻结层一致。",
+      "anchor": "data/rebuild/pipeline.json#auto_detect_order + behavior.json#auto_matrix_observed"
+    },
+    {
+      "id": "D06",
+      "title": "p4 区间刻度为示意、字节总数为真值",
+      "body": "p4 面板左侧的示例 DSL 行与字节刻度为示意教学图（该行非引擎仓内容）；展示的字节总数按同一字符串实际 UTF-8 编码长度计算（真值），刻度线位置按等宽近似绘制，已在图内标注「刻度示意」。右侧诊断 JSON 为真实命令行输出的逐字转录。",
+      "anchor": "tools/panels.py p4 + data/rebuild/behavior.json#errors.d2_unterminated.raw"
+    },
+    {
+      "id": "D07",
+      "title": "门禁放行判例（逐条）",
+      "body": "④标识符禁按判例放行：产品/CLI 名（diagram-ast-parser、diagram-parse）；CLI 动词与 --format 取值（auto/dbml/wavedrom/d2/structurizr/likec4/nomnoml/pikchr 及别名 wavejson/structurizr-dsl/c4/pic）；公开格式与生态名（DBML/WaveDrom/D2/Structurizr/LikeC4/C4/nomnoml/Pikchr/JSON/JSON5/Rust/cargo/clap/serde 系）；公开 DSL 关键字（signal/reg/wave/table/ref/enum/workspace/softwaresystem/systemcontext/container/specification/model/views/box/circle/arrow 等，见 allowlist.json 全表）；JSON 契约键与 format/kind 枚举值由门禁在构建期从冻结 AST 与诊断证据自动采收放行；少量通用英文词（input/output/parse/source/span/line/column/message/format 等）按通用语放行并在 allowlist 登记理由。①文件名禁放行：7 个 fixture 名与 Cargo.toml/Cargo.lock（生态 manifest 名）。②行号禁对真实转录 zone 内的 line/column 字段值豁免（契约值）。③摘录禁对命中区间完整落在放行 zone（真实 CLI 转录原文、CLI flag、AST 信封示例）内豁免。",
+      "anchor": "tools/allowlist.json + tools/gate_check.py"
+    },
+    {
+      "id": "D08",
+      "title": "指纹登记的自指排除",
+      "body": "指纹登记表排除 data/fingerprints.json（登记表自身，防自指漂移）与 VERIFICATION.md（内嵌指纹表）。除此两件与 *.failed.txt（冻结失败留档，非证据）外全树登记。",
+      "anchor": "tools/fingerprint.py EXCLUDED"
+    },
+    {
+      "id": "D09",
+      "title": "渲染依赖固定版 chrome-headless-shell 与系统字体",
+      "body": "截图用固定版 chrome-headless-shell（playwright 缓存 chromium_headless_shell-1234，舰队同机共用；去 --headless=new，加 --disable-gpu + srgb 色彩剖面固定光栅路径）与系统字体（PingFang SC 等）。真空复跑位图比对首选逐字节；PNG 编码差异时退路为像素零差 + PNG 辅助块归一化后一致（本树 PNG 均经 magick 剥除日期/时间块，双跑逐字节一致）。换机器或换 shell 版本渲染像素可能不同。",
+      "anchor": "tools/render_page.mjs + tools/stitch.py + render/layout.json"
+    },
+    {
+      "id": "D10",
+      "title": "SVG 静态检查使用默认 recommended 档",
+      "body": "逐张 rc=0 且 0 缺陷以 svg-linter 默认 recommended profile 判定（稳定规则集）；预览类规则不计入该声明。文本布局按字体度量近似估算并保守换行。",
+      "anchor": "data/rebuild/lint-report.json"
+    },
+    {
+      "id": "D11",
+      "title": "渲染切片为瞬态中间产物",
+      "body": "CDP 切片在拼接完成后即删除（render/slices/ 不留档）；layout.json 保留每片 scrollTo/scrollY 断言记录与零外部请求断言供复核。",
+      "anchor": "render/layout.json scrolls"
+    },
+    {
+      "id": "D12",
+      "title": "退出码 3 未在演示中触发",
+      "body": "退出码 0/1/2 由真实演示观测（成功解析、解析失败、非法格式值）；退出码 3（AST 序列化失败）为引擎源码预留路径，正常输入无法触发，页面如实标注「预留（演示未触发）」。",
+      "anchor": "data/rebuild/pipeline.json#exit_codes + behavior.json#errors"
+    },
+    {
+      "id": "D13",
+      "title": "引擎仓 porcelain 状态披露",
+      "body": "冻结与重建期间引擎仓 HEAD 恒为冻结值，porcelain 仅含本交付树（未跟踪的 docs/ 目录以最外层目录显示）。若 docs/infographics/ 根出现外部治理进程放置的 README.md，非本树产物，本树不增不删不改，仅在验证文档披露。",
+      "anchor": "tools/check_engine.py"
+    },
+    {
+      "id": "D14",
+      "title": "错误演示输入为本方合成",
+      "body": "四组错误演示的 stdin 输入为本方合成（未闭合块、负数寄存器位宽、超限输入、非法格式值），输出与退出码为真实命令行观测；引擎自带测试对这些场景另有断言（测试计数在冻结层）。合成输入不冒充引擎样本。",
+      "anchor": "data/rebuild/behavior.json#errors + tools/probe_behavior.py"
+    },
+    {
+      "id": "D15",
+      "title": "首次冻结尝试中途中止（未落地任何冻结产物）",
+      "body": "一次性冻结脚本首跑在真实构建与测试完成之后、CLI 转录环节因两处脚本缺陷中止（变量名后紧跟多字节标点致 set -u 误析；CLI 调用未切到导出拷贝目录致 rc=2）。冻结采用「全部产物先落 /tmp 暂存、最后原子移入」设计，中止时 data/frozen/ 尚不存在，无任何产物落地；修复脚本后重跑的冻结才是本树唯一冻结层。已落地的 build-run/test-run 耗时数字来自第二次（成功）运行，首次运行的构建/测试计时未进入任何证据。",
+      "anchor": "tools/freeze_once.sh（暂存-原子移入设计）"
+    },
+    {
+      "id": "D16",
+      "title": "构建期工具缺陷的自修复记录（均发生在任何指纹登记之前）",
+      "body": "出页前的迭代中修复了本方工具缺陷：依赖普查正则漏配无括号精确锁版写法（曾计 2，应为 4，已加修复并用对表声明固定）；行为探测曾把 auto 成功演示误比错误退出码；文本换行器曾把连续中文切成不可断整串导致两处面板出界（svg-linter 咬住后改为逐字可断）；门禁标识符采集曾误收源码注释/字符串里的普通英文词（改为只认定义位标识符），HTML/SVG 扫描改为先剥标签取可见文本视图再做位置化豁免（空白容忍、实体还原）。以上全部发生在冻结层落地之后但任何指纹登记/真空复跑之前；冻结层证据不受影响，最终门禁以修复后的工具通过（含六条真实违规正向对照 6/6）。",
+      "anchor": "tools/export_static.py + tools/probe_behavior.py + tools/svgkit.py + tools/gate_check.py"
+    }
+  ]
+}

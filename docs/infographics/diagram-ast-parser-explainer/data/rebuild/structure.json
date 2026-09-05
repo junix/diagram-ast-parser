@@ -1,0 +1,106 @@
+{
+  "dependencies": [
+    {
+      "name": "clap",
+      "version_spec": "=4.6.6"
+    },
+    {
+      "name": "serde_json5",
+      "version_spec": "=0.2.1"
+    },
+    {
+      "name": "serde",
+      "version_spec": "=1.0.229"
+    },
+    {
+      "name": "serde_json",
+      "version_spec": "=1.0.151"
+    }
+  ],
+  "dependencies_exact_pinned": 4,
+  "fixture_count": 7,
+  "fixtures": [
+    {
+      "bytes": 229,
+      "lines": 17,
+      "name": "architecture.d2"
+    },
+    {
+      "bytes": 197,
+      "lines": 6,
+      "name": "classes.nomnoml"
+    },
+    {
+      "bytes": 139,
+      "lines": 7,
+      "name": "flow.pikchr"
+    },
+    {
+      "bytes": 363,
+      "lines": 23,
+      "name": "model.c4"
+    },
+    {
+      "bytes": 673,
+      "lines": 29,
+      "name": "schema.dbml"
+    },
+    {
+      "bytes": 329,
+      "lines": 13,
+      "name": "timing.json5"
+    },
+    {
+      "bytes": 573,
+      "lines": 24,
+      "name": "workspace.dsl"
+    }
+  ],
+  "forbid_unsafe": true,
+  "format_modules": 7,
+  "groups": {
+    "ast": 8,
+    "core": 6,
+    "parser": 9
+  },
+  "kind": "engine_census",
+  "loc": {
+    "ast_types": 558,
+    "core": 875,
+    "integration_tests": 128,
+    "parsers": 3154,
+    "src_total": 4587,
+    "total": 4715
+  },
+  "msrv": "1.85",
+  "per_file_loc": {
+    "src/ast/d2.rs": 55,
+    "src/ast/dbml.rs": 139,
+    "src/ast/likec4.rs": 90,
+    "src/ast/mod.rs": 37,
+    "src/ast/nomnoml.rs": 46,
+    "src/ast/pikchr.rs": 55,
+    "src/ast/structurizr.rs": 68,
+    "src/ast/wavedrom.rs": 68,
+    "src/error.rs": 70,
+    "src/format.rs": 120,
+    "src/lexer.rs": 459,
+    "src/lib.rs": 60,
+    "src/main.rs": 119,
+    "src/parser/d2.rs": 191,
+    "src/parser/dbml.rs": 746,
+    "src/parser/likec4.rs": 597,
+    "src/parser/mod.rs": 32,
+    "src/parser/nomnoml.rs": 388,
+    "src/parser/pikchr.rs": 230,
+    "src/parser/structurizr.rs": 355,
+    "src/parser/tree.rs": 283,
+    "src/parser/wavedrom.rs": 332,
+    "src/span.rs": 47,
+    "tests/parsers.rs": 128
+  },
+  "rust_source_files": 23,
+  "rust_test_files": 1,
+  "source": "git 对象（HEAD），非工作区",
+  "tests_declared": 12
+}

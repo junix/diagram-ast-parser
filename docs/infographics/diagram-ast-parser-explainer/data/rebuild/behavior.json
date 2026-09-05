@@ -1,0 +1,78 @@
+{
+  "auto_matrix_all_match": true,
+  "auto_matrix_expected": {
+    "architecture.d2": "d2",
+    "classes.nomnoml": "nomnoml",
+    "flow.pikchr": "pikchr",
+    "model.c4": "like_c4",
+    "schema.dbml": "dbml",
+    "timing.json5": "wave_drom",
+    "workspace.dsl": "structurizr"
+  },
+  "auto_matrix_observed": {
+    "architecture.d2": "d2",
+    "classes.nomnoml": "nomnoml",
+    "flow.pikchr": "pikchr",
+    "model.c4": "like_c4",
+    "schema.dbml": "dbml",
+    "timing.json5": "wave_drom",
+    "workspace.dsl": "structurizr"
+  },
+  "auto_wavejson_sample": {
+    "json_tag": "wave_drom",
+    "rc": 0
+  },
+  "double_run_identical": {
+    "d2": true,
+    "dbml": true,
+    "likec4": true,
+    "nomnoml": true,
+    "pikchr": true,
+    "structurizr": true,
+    "wavedrom": true
+  },
+  "errors": {
+    "bad_format_value": {
+      "json": null,
+      "raw": "error: unsupported format: nope",
+      "rc": 2
+    },
+    "d2_unterminated": {
+      "json": {
+        "column": 1,
+        "format": "d2",
+        "line": 1,
+        "message": "unterminated block: expected `}`",
+        "span": null
+      },
+      "raw": "{\n  \"format\": \"d2\",\n  \"message\": \"unterminated block: expected `}`\",\n  \"span\": null,\n  \"line\": 1,\n  \"column\": 1\n}",
+      "rc": 1
+    },
+    "input_size_limit": {
+      "json": null,
+      "raw": "d2 parse error at 1:1: input is 12 bytes, exceeding the configured limit of 4 bytes",
+      "rc": 1
+    },
+    "wavedrom_negative_reg_width": {
+      "json": {
+        "column": 1,
+        "format": "wave_drom",
+        "line": 1,
+        "message": "register field `bits` must be an unsigned integer",
+        "span": null
+      },
+      "raw": "{\n  \"format\": \"wave_drom\",\n  \"message\": \"register field `bits` must be an unsigned integer\",\n  \"span\": null,\n  \"line\": 1,\n  \"column\": 1\n}",
+      "rc": 1
+    }
+  },
+  "kind": "behavior_probe",
+  "rebuilt_binary_reproduces_frozen_ast": {
+    "d2": true,
+    "dbml": true,
+    "likec4": true,
+    "nomnoml": true,
+    "pikchr": true,
+    "structurizr": true,
+    "wavedrom": true
+  }
+}

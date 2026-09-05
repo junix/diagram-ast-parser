@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="620" viewBox="0 0 1140 620" role="img" aria-label="auto 格式识别的瀑布顺序">
+<rect x="0.0" y="0.0" width="1140.0" height="620.0" rx="10" fill="#FFFFFF"/>
+<text x="40.0" y="36.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="15.5" fill="#44556E" font-weight="400" text-anchor="start">按从上到下的顺序做保守试探，先命中先停：</text>
+<rect x="40.0" y="58.0" width="620.0" height="52.0" rx="10" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="58.0" width="6.0" height="52.0" rx="3" fill="#2C6BC4"/>
+<text x="64.0" y="83.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="14.5" fill="#14477E" font-weight="700" text-anchor="start">wave_drom</text>
+<text x="64.0" y="103.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">以 { 开头且出现 signal: 或 reg: 键</text>
+<path d="M 70.0 110.0 L 70.0 119.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 70.0 119.0 L 66.7 112.3 L 73.3 112.3 Z" fill="#2C6BC4"/>
+<rect x="40.0" y="120.0" width="620.0" height="52.0" rx="10" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="120.0" width="6.0" height="52.0" rx="3" fill="#2C6BC4"/>
+<text x="64.0" y="145.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="14.5" fill="#14477E" font-weight="700" text-anchor="start">like_c4</text>
+<text x="64.0" y="165.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">出现 specification 且伴随 model / views</text>
+<path d="M 70.0 172.0 L 70.0 181.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 70.0 181.0 L 66.7 174.3 L 73.3 174.3 Z" fill="#2C6BC4"/>
+<rect x="40.0" y="182.0" width="620.0" height="52.0" rx="10" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="182.0" width="6.0" height="52.0" rx="3" fill="#2C6BC4"/>
+<text x="64.0" y="207.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="14.5" fill="#14477E" font-weight="700" text-anchor="start">structurizr</text>
+<text x="64.0" y="227.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">出现 workspace 且伴随 softwaresystem / systemcontext / container</text>
+<path d="M 70.0 234.0 L 70.0 243.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 70.0 243.0 L 66.7 236.3 L 73.3 236.3 Z" fill="#2C6BC4"/>
+<rect x="40.0" y="244.0" width="620.0" height="52.0" rx="10" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="244.0" width="6.0" height="52.0" rx="3" fill="#2C6BC4"/>
+<text x="64.0" y="269.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="14.5" fill="#14477E" font-weight="700" text-anchor="start">dbml</text>
+<text x="64.0" y="289.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">出现 table 表语句 / ref: / enum 之一</text>
+<path d="M 70.0 296.0 L 70.0 305.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 70.0 305.0 L 66.7 298.3 L 73.3 298.3 Z" fill="#2C6BC4"/>
+<rect x="40.0" y="306.0" width="620.0" height="52.0" rx="10" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="306.0" width="6.0" height="52.0" rx="3" fill="#2C6BC4"/>
+<text x="64.0" y="331.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="14.5" fill="#14477E" font-weight="700" text-anchor="start">nomnoml</text>
+<text x="64.0" y="351.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">存在 # 或 [ 开头的行且文本含方括号</text>
+<path d="M 70.0 358.0 L 70.0 367.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 70.0 367.0 L 66.7 360.3 L 73.3 360.3 Z" fill="#2C6BC4"/>
+<rect x="40.0" y="368.0" width="620.0" height="52.0" rx="10" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="368.0" width="6.0" height="52.0" rx="3" fill="#2C6BC4"/>
+<text x="64.0" y="393.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="14.5" fill="#14477E" font-weight="700" text-anchor="start">pikchr</text>
+<text x="64.0" y="413.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">行首词命中几何对象类型（box / circle / arrow 等）</text>
+<path d="M 70.0 420.0 L 70.0 429.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 70.0 429.0 L 66.7 422.3 L 73.3 422.3 Z" fill="#2C6BC4"/>
+<rect x="40.0" y="430.0" width="620.0" height="52.0" rx="10" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="430.0" width="6.0" height="52.0" rx="3" fill="#75879D"/>
+<text x="64.0" y="455.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="14.5" fill="#14477E" font-weight="700" text-anchor="start">d2</text>
+<text x="64.0" y="475.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">以上都不命中时的兜底</text>
+<text x="40.0" y="500.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#75879D" font-weight="400" text-anchor="start">生产建议显式指定格式：多种语言词法形态可能重叠。</text>
+<rect x="700.0" y="58.0" width="400.0" height="508.0" rx="12" fill="#F2F7FD" stroke="#D5DFEB" stroke-width="1"/>
+<text x="724.0" y="92.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16" fill="#182841" font-weight="700" text-anchor="start">实测识别矩阵（7/7 命中）</text>
+<text x="724.0" y="126.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#182841" font-weight="400" text-anchor="start">schema.dbml</text>
+<text x="900.0" y="126.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">→</text>
+<text x="926.0" y="126.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#14477E" font-weight="600" text-anchor="start">dbml</text>
+<text x="1056.0" y="126.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#44556E" font-weight="400" text-anchor="start">✓</text>
+<text x="724.0" y="160.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#182841" font-weight="400" text-anchor="start">timing.json5</text>
+<text x="900.0" y="160.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">→</text>
+<text x="926.0" y="160.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#14477E" font-weight="600" text-anchor="start">wave_drom</text>
+<text x="1056.0" y="160.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#44556E" font-weight="400" text-anchor="start">✓</text>
+<text x="724.0" y="194.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#182841" font-weight="400" text-anchor="start">architecture.d2</text>
+<text x="900.0" y="194.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">→</text>
+<text x="926.0" y="194.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#14477E" font-weight="600" text-anchor="start">d2</text>
+<text x="1056.0" y="194.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#44556E" font-weight="400" text-anchor="start">✓</text>
+<text x="724.0" y="228.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#182841" font-weight="400" text-anchor="start">workspace.dsl</text>
+<text x="900.0" y="228.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">→</text>
+<text x="926.0" y="228.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#14477E" font-weight="600" text-anchor="start">structurizr</text>
+<text x="1056.0" y="228.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#44556E" font-weight="400" text-anchor="start">✓</text>
+<text x="724.0" y="262.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#182841" font-weight="400" text-anchor="start">model.c4</text>
+<text x="900.0" y="262.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">→</text>
+<text x="926.0" y="262.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#14477E" font-weight="600" text-anchor="start">like_c4</text>
+<text x="1056.0" y="262.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#44556E" font-weight="400" text-anchor="start">✓</text>
+<text x="724.0" y="296.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#182841" font-weight="400" text-anchor="start">classes.nomnoml</text>
+<text x="900.0" y="296.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">→</text>
+<text x="926.0" y="296.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#14477E" font-weight="600" text-anchor="start">nomnoml</text>
+<text x="1056.0" y="296.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#44556E" font-weight="400" text-anchor="start">✓</text>
+<text x="724.0" y="330.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#182841" font-weight="400" text-anchor="start">flow.pikchr</text>
+<text x="900.0" y="330.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">→</text>
+<text x="926.0" y="330.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#14477E" font-weight="600" text-anchor="start">pikchr</text>
+<text x="1056.0" y="330.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#44556E" font-weight="400" text-anchor="start">✓</text>
+<text x="724.0" y="372.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#75879D" font-weight="400" text-anchor="start">全部由重建二进制对冻结样例逐个重放实测；</text>
+<text x="724.0" y="396.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#75879D" font-weight="400" text-anchor="start">仅给波形对象时也识别为时序格式。</text>
+</svg>

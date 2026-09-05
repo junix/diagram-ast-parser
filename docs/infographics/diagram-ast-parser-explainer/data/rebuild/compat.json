@@ -1,0 +1,42 @@
+{
+  "kind": "compatibility_matrix",
+  "note": "解析成功只意味着源在本项目 AST 中结构可表示，不代表上游渲染器会语义接受",
+  "rows": [
+    {
+      "deferred": "模块导入解析、数据血缘扩展、SQL 生成、语义重复/类型检查",
+      "format": "DBML",
+      "implemented": "项目、表、表局部、列与设置、索引、检查约束、枚举、引用、表组、注记"
+    },
+    {
+      "deferred": "波形符号校验、边语法校验、渲染语义",
+      "format": "WaveDrom",
+      "implemented": "JSON5 输入、嵌套信号组、lanes、data、节点、相位/周期、边、头尾、寄存器字段、未知字段保留"
+    },
+    {
+      "deferred": "替换、变量、通配、类、导入装载、形状/属性校验、board/layer/scenario 语义",
+      "format": "D2",
+      "implemented": "条目/映射、标量标签、边链、边属性映射、常规/展开导入"
+    },
+    {
+      "deferred": "include/script/plugin、表达式求值、标识符解析、隐含关系、原型展开、视图计算",
+      "format": "Structurizr DSL",
+      "implemented": "workspace、模型层级、公共元素、关系、指令、通用块/属性、视图即块"
+    },
+    {
+      "deferred": "多文件合并、词法作用域解析、谓词、继承、部署展开、视图计算、样式校验",
+      "format": "LikeC4",
+      "implemented": "specification 种类、模型层级、普通/带种类关系、标签、视图、extend、部署节点与实例引用"
+    },
+    {
+      "deferred": "超过两个顶层分类器的关系链、布局/配置校验、嵌套图语义分析",
+      "format": "nomnoml",
+      "implemented": "指令/自定义样式、分类器类型/属性、隔间、二元关系与端点标签"
+    },
+    {
+      "deferred": "表达式优先级 AST、对象/位置引用解析、宏展开、几何求值",
+      "format": "Pikchr",
+      "implemented": "对象、标签、方向、赋值、define 块、print、assert、命名位置；属性以 token 保留"
+    }
+  ],
+  "source": "引擎 README 兼容性矩阵的中文意译（见偏差披露）"
+}

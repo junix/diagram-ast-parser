@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="676" viewBox="0 0 1140 676" role="img" aria-label="资源限流与退出码契约">
+<rect x="0.0" y="0.0" width="1140.0" height="676.0" rx="10" fill="#FFFFFF"/>
+<rect x="40.0" y="28.0" width="546.0" height="300.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<text x="64.0" y="64.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">两项资源上限（默认值，均可经命令行调整）</text>
+<rect x="64.0" y="102.0" width="498.0" height="66.0" rx="10" fill="#FFFFFF" stroke="#D5DFEB" stroke-width="1"/>
+<text x="84.0" y="130.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14.5" fill="#182841" font-weight="600" text-anchor="start">输入字节数上限</text>
+<text x="84.0" y="154.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#14477E" font-weight="400" text-anchor="start">--max-input-bytes</text>
+<text x="542.0" y="140.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="20" fill="#14477E" font-weight="700" text-anchor="end">8 MiB</text>
+<rect x="64.0" y="184.0" width="498.0" height="66.0" rx="10" fill="#FFFFFF" stroke="#D5DFEB" stroke-width="1"/>
+<text x="84.0" y="212.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14.5" fill="#182841" font-weight="600" text-anchor="start">花括号嵌套深度上限</text>
+<text x="84.0" y="236.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#14477E" font-weight="400" text-anchor="start">--max-depth</text>
+<text x="542.0" y="222.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="20" fill="#14477E" font-weight="700" text-anchor="end">128 层</text>
+<text x="64.0" y="272.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">如实声明：深度上限只约束花括号系解析器；</text>
+<text x="64.0" y="296.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">JSON5 嵌套与分类器嵌套文本当前不受它约束。</text>
+<rect x="40.0" y="348.0" width="546.0" height="300.0" rx="12" fill="#101B2E"/>
+<text x="64.0" y="382.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="15" fill="#D9E7FA" font-weight="700" text-anchor="start">超限实测（4 字节上限喂 12 字节输入）</text>
+<text x="64.0" y="414.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#BBD4F5" font-weight="400" text-anchor="start">d2 parse error at 1:1: input is 12 bytes, exceeding the configured limit</text>
+<text x="64.0" y="438.0" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#BBD4F5" font-weight="400" text-anchor="start">of 4 bytes</text>
+<text x="64.0" y="528.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#8FA9CC" font-weight="400" text-anchor="start">退出码 1 · 拒绝先于解析发生</text>
+<text x="64.0" y="588.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#8FA9CC" font-weight="400" text-anchor="start">拒绝发生在解析之前：先量长度，再谈语法。</text>
+<rect x="610.0" y="28.0" width="490.0" height="620.0" rx="12" fill="#F2F7FD" stroke="#D5DFEB" stroke-width="1"/>
+<text x="634.0" y="62.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">退出码契约</text>
+<rect x="634.0" y="100.0" width="442.0" height="88.0" rx="10" fill="#FFFFFF" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="634.0" y="100.0" width="6.0" height="88.0" rx="3" fill="#2C6BC4"/>
+<text x="656.0" y="134.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="20" fill="#14477E" font-weight="700" text-anchor="start">0</text>
+<text x="698.0" y="132.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12" fill="#44556E" font-weight="400" text-anchor="start">实测</text>
+<text x="698.0" y="162.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#182841" font-weight="400" text-anchor="start">解析成功，stdout 输出 JSON AST</text>
+<rect x="634.0" y="204.0" width="442.0" height="88.0" rx="10" fill="#FFFFFF" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="634.0" y="204.0" width="6.0" height="88.0" rx="3" fill="#2C6BC4"/>
+<text x="656.0" y="238.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="20" fill="#14477E" font-weight="700" text-anchor="start">1</text>
+<text x="698.0" y="236.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12" fill="#44556E" font-weight="400" text-anchor="start">实测</text>
+<text x="698.0" y="266.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#182841" font-weight="400" text-anchor="start">解析失败（诊断走 stderr，可要求 JSON 形态）</text>
+<rect x="634.0" y="308.0" width="442.0" height="88.0" rx="10" fill="#FFFFFF" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="634.0" y="308.0" width="6.0" height="88.0" rx="3" fill="#2C6BC4"/>
+<text x="656.0" y="342.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="20" fill="#14477E" font-weight="700" text-anchor="start">2</text>
+<text x="698.0" y="340.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12" fill="#44556E" font-weight="400" text-anchor="start">实测</text>
+<text x="698.0" y="370.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#182841" font-weight="400" text-anchor="start">用法或输入输出错误（非法 format 值 / 文件不可读）</text>
+<rect x="634.0" y="412.0" width="442.0" height="88.0" rx="10" fill="#FFFFFF" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="634.0" y="412.0" width="6.0" height="88.0" rx="3" fill="#75879D"/>
+<text x="656.0" y="446.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="20" fill="#14477E" font-weight="700" text-anchor="start">3</text>
+<text x="698.0" y="444.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12" fill="#75879D" font-weight="400" text-anchor="start">预留（演示未触发）</text>
+<text x="698.0" y="474.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#182841" font-weight="400" text-anchor="start">AST 序列化失败（源码中预留的路径，演示未触发）</text>
+</svg>

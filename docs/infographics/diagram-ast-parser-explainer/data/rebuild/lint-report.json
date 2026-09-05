@@ -1,0 +1,39 @@
+{
+  "panels": {
+    "p1-hero": {
+      "findings": 0,
+      "rc": 0
+    },
+    "p2-formats": {
+      "findings": 0,
+      "rc": 0
+    },
+    "p3-pipeline": {
+      "findings": 0,
+      "rc": 0
+    },
+    "p4-span-error": {
+      "findings": 0,
+      "rc": 0
+    },
+    "p5-auto": {
+      "findings": 0,
+      "rc": 0
+    },
+    "p6-limits": {
+      "findings": 0,
+      "rc": 0
+    },
+    "p7-compat": {
+      "findings": 0,
+      "rc": 0
+    },
+    "p8-verify": {
+      "findings": 0,
+      "rc": 0
+    }
+  },
+  "profile": "recommended(默认)",
+  "tool": "svg-linter",
+  "total_findings": 0
+}

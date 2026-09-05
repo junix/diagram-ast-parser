@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="640" viewBox="0 0 1140 640" role="img" aria-label="可审计性：证据分层与门禁">
+<rect x="0.0" y="0.0" width="1140.0" height="640.0" rx="10" fill="#FFFFFF"/>
+<rect x="40.0" y="28.0" width="337.3" height="560.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="28.0" width="337.3" height="6.0" rx="3" fill="#14477E"/>
+<text x="60.0" y="66.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">冻结层（一次性）</text>
+<text x="60.0" y="102.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#14477E" font-weight="700" text-anchor="start">·</text>
+<text x="78.0" y="102.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">冷构建 11.2 秒（离线、全新目标目录）</text>
+<text x="60.0" y="137.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#14477E" font-weight="700" text-anchor="start">·</text>
+<text x="78.0" y="137.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">测试 10.1 秒 · 12 项通过</text>
+<text x="60.0" y="172.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#14477E" font-weight="700" text-anchor="start">·</text>
+<text x="78.0" y="172.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">二进制 1,843,072 字节</text>
+<text x="60.0" y="207.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#14477E" font-weight="700" text-anchor="start">·</text>
+<text x="78.0" y="207.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">7 份紧凑 JSON 语法树逐字存底并计指纹</text>
+<text x="60.0" y="242.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#14477E" font-weight="700" text-anchor="start">·</text>
+<text x="78.0" y="242.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">冻结后绝不重测覆盖（一次性守卫）</text>
+<line x1="60.0" y1="522.0" x2="357.3" y2="522.0" stroke="#D5DFEB" stroke-width="1"/>
+<text x="60.0" y="548.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">一次性实测，只此一份</text>
+<rect x="401.3" y="28.0" width="337.3" height="560.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="401.3" y="28.0" width="337.3" height="6.0" rx="3" fill="#2C6BC4"/>
+<text x="421.3" y="66.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">重建层（确定性）</text>
+<text x="421.3" y="102.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#2C6BC4" font-weight="700" text-anchor="start">·</text>
+<text x="439.3" y="102.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">重建二进制重放解析 7/7 逐字节复现冻结输</text>
+<text x="439.3" y="121.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">出</text>
+<text x="421.3" y="156.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#2C6BC4" font-weight="700" text-anchor="start">·</text>
+<text x="439.3" y="156.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">同轮双跑 7/7 输出一致</text>
+<text x="421.3" y="191.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#2C6BC4" font-weight="700" text-anchor="start">·</text>
+<text x="439.3" y="191.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">auto 识别矩阵 7/7 与冻结层一致</text>
+<text x="421.3" y="226.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#2C6BC4" font-weight="700" text-anchor="start">·</text>
+<text x="439.3" y="226.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">错误演示 4 组退出码与冻结层一致</text>
+<text x="421.3" y="261.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#2C6BC4" font-weight="700" text-anchor="start">·</text>
+<text x="439.3" y="261.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">重建链产物不含路径/时间/版本串（归一化</text>
+<text x="439.3" y="280.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">烧录）</text>
+<line x1="421.3" y1="522.0" x2="718.7" y2="522.0" stroke="#D5DFEB" stroke-width="1"/>
+<text x="421.3" y="548.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">双跑逐字节相同</text>
+<rect x="762.7" y="28.0" width="337.3" height="560.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="762.7" y="28.0" width="337.3" height="6.0" rx="3" fill="#8FB8EA"/>
+<text x="782.7" y="66.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">门禁与检查（构建期）</text>
+<text x="782.7" y="102.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#44556E" font-weight="700" text-anchor="start">·</text>
+<text x="800.7" y="102.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">六禁令扫描：页面 + 全部面板 0 违规</text>
+<text x="782.7" y="137.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#44556E" font-weight="700" text-anchor="start">·</text>
+<text x="800.7" y="137.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">六条真实违规正向对照 6/6 咬住</text>
+<text x="782.7" y="172.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#44556E" font-weight="700" text-anchor="start">·</text>
+<text x="800.7" y="172.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">SVG 静态检查：8 张面板全部 0 缺陷</text>
+<text x="782.7" y="207.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#44556E" font-weight="700" text-anchor="start">·</text>
+<text x="800.7" y="207.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">页面数字逐一与证据文件机检对表</text>
+<text x="782.7" y="242.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#44556E" font-weight="700" text-anchor="start">·</text>
+<text x="800.7" y="242.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">渲染前断言宽度与滚动定位（记录在案）</text>
+<line x1="782.7" y1="522.0" x2="1080.0" y2="522.0" stroke="#D5DFEB" stroke-width="1"/>
+<text x="782.7" y="548.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">出页前强制通过</text>
+</svg>

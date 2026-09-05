@@ -1,0 +1,78 @@
+{
+  "categories": [
+    "① 源码文件名",
+    "② 行号定位",
+    "③ ≥25 字符逐字摘录",
+    "④ 引擎标识符",
+    "⑤ 内部路径",
+    "⑥ 生成器与重建命令"
+  ],
+  "kind": "gate_selfcheck",
+  "scan_targets": [
+    "index.html",
+    "p1-hero.svg",
+    "p2-formats.svg",
+    "p3-pipeline.svg",
+    "p4-span-error.svg",
+    "p5-auto.svg",
+    "p6-limits.svg",
+    "p7-compat.svg",
+    "p8-verify.svg"
+  ],
+  "selfcheck": [
+    {
+      "caught_cats": [
+        1,
+        4
+      ],
+      "expect": 1,
+      "ok": true,
+      "poison": "引擎的 lexer.rs 负责词法切分"
+    },
+    {
+      "caught_cats": [
+        2
+      ],
+      "expect": 2,
+      "ok": true,
+      "poison": "出错位置在语句树第 42 行"
+    },
+    {
+      "caught_cats": [
+        3,
+        4
+      ],
+      "expect": 3,
+      "ok": true,
+      "poison": "结构定义如下：pub struct ParseOptions { pub max_input_bytes: usize, pub"
+    },
+    {
+      "caught_cats": [
+        4
+      ],
+      "expect": 4,
+      "ok": true,
+      "poison": "根类型是 DbmlDocument 的文档对象"
+    },
+    {
+      "caught_cats": [
+        1,
+        4,
+        5
+      ],
+      "expect": 5,
+      "ok": true,
+      "poison": "树构建在 src/parser/tree.rs 中完成"
+    },
+    {
+      "caught_cats": [
+        6
+      ],
+      "expect": 6,
+      "ok": true,
+      "poison": "本页由 build_page.py 生成"
+    }
+  ],
+  "selfcheck_6_of_6": true,
+  "violations": 0
+}
