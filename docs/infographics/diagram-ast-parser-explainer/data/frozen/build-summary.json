@@ -1,0 +1,70 @@
+{
+  "auto_matrix": {
+    "architecture.d2": "d2",
+    "classes.nomnoml": "nomnoml",
+    "flow.pikchr": "pikchr",
+    "model.c4": "like_c4",
+    "schema.dbml": "dbml",
+    "timing.json5": "wave_drom",
+    "workspace.dsl": "structurizr"
+  },
+  "binary_bytes": 1843072,
+  "binary_name": "diagram-parse",
+  "build_secs": 11.16,
+  "cli_formats": {
+    "d2": {
+      "ast_bytes": 1685,
+      "ast_file": "ast/d2.json",
+      "ast_sha256": "c186f1bef1fbb0e7f5c31697cf91fefdd7b7d9f056bd24313841c78fb27ca954",
+      "rc": 0
+    },
+    "dbml": {
+      "ast_bytes": 3007,
+      "ast_file": "ast/dbml.json",
+      "ast_sha256": "3688963b227f8a9ada25c29ea13dc9192e4e51a9fdf696a54c9ce701ac72bf1f",
+      "rc": 0
+    },
+    "likec4": {
+      "ast_bytes": 2387,
+      "ast_file": "ast/likec4.json",
+      "ast_sha256": "79ad8aaece299611456499c4f7c7b335378481a57436c474b096cdb8d276dd26",
+      "rc": 0
+    },
+    "nomnoml": {
+      "ast_bytes": 1130,
+      "ast_file": "ast/nomnoml.json",
+      "ast_sha256": "5c41f6bce84286526f4230d6d1fa8625f92b74e25e88dce14969544cc0027bf0",
+      "rc": 0
+    },
+    "pikchr": {
+      "ast_bytes": 1538,
+      "ast_file": "ast/pikchr.json",
+      "ast_sha256": "676a1a3a30c200d2c8937d9168d4959adaafe98e9c1d8b9156ae1b62cabfbaa8",
+      "rc": 0
+    },
+    "structurizr": {
+      "ast_bytes": 2926,
+      "ast_file": "ast/structurizr.json",
+      "ast_sha256": "88203ea62f53e14c8c8adecb21536d2556524e446f6ebb354e50c39ae5bd1f37",
+      "rc": 0
+    },
+    "wavedrom": {
+      "ast_bytes": 676,
+      "ast_file": "ast/wavedrom.json",
+      "ast_sha256": "c222d9d16b8d417d10d1ae809444ed44d49ab90c3b2de9884c3f85f4e1428e05",
+      "rc": 0
+    }
+  },
+  "error_demos_rc": {
+    "badfmt": 2,
+    "d2": 1,
+    "size": 1,
+    "wavedrom": 1
+  },
+  "kind": "one_shot_frozen_summary",
+  "test_secs": 10.11,
+  "test_suites": 4,
+  "tests_failed": 0,
+  "tests_ignored": 0,
+  "tests_passed": 12
+}

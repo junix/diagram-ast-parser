@@ -1,0 +1,135 @@
+{
+  "auto_detect_order": [
+    {
+      "format": "wave_drom",
+      "trigger": "以 { 开头且出现 signal: 或 reg: 键"
+    },
+    {
+      "format": "like_c4",
+      "trigger": "出现 specification 且伴随 model / views"
+    },
+    {
+      "format": "structurizr",
+      "trigger": "出现 workspace 且伴随 softwaresystem / systemcontext / container"
+    },
+    {
+      "format": "dbml",
+      "trigger": "出现 table 表语句 / ref: / enum 之一"
+    },
+    {
+      "format": "nomnoml",
+      "trigger": "存在 # 或 [ 开头的行且文本含方括号"
+    },
+    {
+      "format": "pikchr",
+      "trigger": "行首词命中几何对象类型（box / circle / arrow 等）"
+    },
+    {
+      "format": "d2",
+      "trigger": "以上都不命中时的兜底"
+    }
+  ],
+  "document_envelope": {
+    "case": "snake_case",
+    "content": "ast",
+    "tag": "format"
+  },
+  "error_json_keys": [
+    "format",
+    "message",
+    "span",
+    "line",
+    "column"
+  ],
+  "exit_codes": [
+    {
+      "code": 0,
+      "meaning": "解析成功，stdout 输出 JSON AST",
+      "observed": true
+    },
+    {
+      "code": 1,
+      "meaning": "解析失败（诊断走 stderr，可要求 JSON 形态）",
+      "observed": true
+    },
+    {
+      "code": 2,
+      "meaning": "用法或输入输出错误（非法 format 值 / 文件不可读）",
+      "observed": true
+    },
+    {
+      "code": 3,
+      "meaning": "AST 序列化失败（源码中预留的路径，演示未触发）",
+      "observed": false
+    }
+  ],
+  "kind": "parse_pipeline",
+  "lexer_capabilities": [
+    "单引号 / 双引号 / 三引号 / DBML 反引号字符串（按语言启用）",
+    "行注释 / 块注释按语言选择",
+    "拒绝不闭合的字符串与块定界符",
+    "花括号系解析器受嵌套深度上限约束",
+    "JSON5 嵌套与 nomnoml 嵌套分类文本当前不受深度上限约束（引擎如实声明）"
+  ],
+  "limits": {
+    "cli_flags": [
+      "--max-input-bytes",
+      "--max-depth"
+    ],
+    "max_input_bytes_default": 8388608,
+    "max_input_bytes_display": "8 MiB",
+    "max_nesting_depth_default": 128
+  },
+  "paths": [
+    {
+      "formats": [
+        "wavedrom"
+      ],
+      "id": "json5",
+      "note": "信号组、数据道、节点/相位/边、寄存器字段；未知字段原样保留",
+      "stages": [
+        "JSON5 输入",
+        "JSON5 解析器",
+        "类型化时序/寄存器 AST"
+      ]
+    },
+    {
+      "formats": [
+        "dbml",
+        "d2",
+        "structurizr",
+        "likec4",
+        "pikchr"
+      ],
+      "id": "braced",
+      "note": "五种语言共享词法与树骨架，各自落到专用 AST",
+      "stages": [
+        "源文本",
+        "可配置词法器",
+        "花括号语句树",
+        "格式分类器 + 类型化 AST 构建器"
+      ]
+    },
+    {
+      "formats": [
+        "nomnoml"
+      ],
+      "id": "nomnoml",
+      "note": "# 指令行与 [分类器] 记法按括号平衡切分",
+      "stages": [
+        "源文本",
+        "平衡分类器扫描器",
+        "分类器/关系 AST"
+      ]
+    }
+  ],
+  "span_model": {
+    "fields": [
+      "start",
+      "end"
+    ],
+    "line_column": "一行一列起算（错误报告用）",
+    "unit": "UTF-8 字节偏移",
+    "wrapper": "每个语句级节点都携带定位区间"
+  }
+}

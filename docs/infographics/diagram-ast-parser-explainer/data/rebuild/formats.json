@@ -1,0 +1,94 @@
+{
+  "double_run_all_identical": true,
+  "formats": {
+    "d2": {
+      "ast_bytes": 1685,
+      "ast_sha256": "c186f1bef1fbb0e7f5c31697cf91fefdd7b7d9f056bd24313841c78fb27ca954",
+      "ast_shape": {
+        "statements": 6
+      },
+      "domain": "声明式地图与边",
+      "fixture": "architecture.d2",
+      "json_tag": "d2",
+      "rc": 0
+    },
+    "dbml": {
+      "ast_bytes": 3007,
+      "ast_sha256": "3688963b227f8a9ada25c29ea13dc9192e4e51a9fdf696a54c9ce701ac72bf1f",
+      "ast_shape": {
+        "item_kinds": [
+          "project",
+          "table",
+          "table",
+          "enum",
+          "ref"
+        ],
+        "items": 5
+      },
+      "domain": "数据库建模",
+      "fixture": "schema.dbml",
+      "json_tag": "dbml",
+      "rc": 0
+    },
+    "likec4": {
+      "ast_bytes": 2387,
+      "ast_sha256": "79ad8aaece299611456499c4f7c7b335378481a57436c474b096cdb8d276dd26",
+      "ast_shape": {
+        "statements": 3
+      },
+      "domain": "架构模型 + 规约",
+      "fixture": "model.c4",
+      "json_tag": "like_c4",
+      "rc": 0
+    },
+    "nomnoml": {
+      "ast_bytes": 1130,
+      "ast_sha256": "5c41f6bce84286526f4230d6d1fa8625f92b74e25e88dce14969544cc0027bf0",
+      "ast_shape": {
+        "directives": 3,
+        "statements": 2
+      },
+      "domain": "分类器与关系图",
+      "fixture": "classes.nomnoml",
+      "json_tag": "nomnoml",
+      "rc": 0
+    },
+    "pikchr": {
+      "ast_bytes": 1538,
+      "ast_sha256": "676a1a3a30c200d2c8937d9168d4959adaafe98e9c1d8b9156ae1b62cabfbaa8",
+      "ast_shape": {
+        "statements": 7
+      },
+      "domain": "过程式几何绘图",
+      "fixture": "flow.pikchr",
+      "json_tag": "pikchr",
+      "rc": 0
+    },
+    "structurizr": {
+      "ast_bytes": 2926,
+      "ast_sha256": "88203ea62f53e14c8c8adecb21536d2556524e446f6ebb354e50c39ae5bd1f37",
+      "ast_shape": {
+        "statements": 1
+      },
+      "domain": "架构模型 + 视图",
+      "fixture": "workspace.dsl",
+      "json_tag": "structurizr",
+      "rc": 0
+    },
+    "wavedrom": {
+      "ast_bytes": 676,
+      "ast_sha256": "c222d9d16b8d417d10d1ae809444ed44d49ab90c3b2de9884c3f85f4e1428e05",
+      "ast_shape": {
+        "edges": 1,
+        "has_register": false,
+        "signals_top": 2
+      },
+      "domain": "时序波形 / 寄存器",
+      "fixture": "timing.json5",
+      "json_tag": "wave_drom",
+      "rc": 0
+    }
+  },
+  "kind": "format_facts",
+  "rebuild_reproduce_all": true
+}

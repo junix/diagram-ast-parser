@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="830" viewBox="0 0 1140 830" role="img" aria-label="七种格式的实测解析事实">
+<rect x="0.0" y="0.0" width="1140.0" height="830.0" rx="10" fill="#FFFFFF"/>
+<rect x="40.0" y="24.0" width="518.0" height="176.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="24.0" width="6.0" height="176.0" rx="3" fill="#14477E"/>
+<text x="66.0" y="58.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="19" fill="#182841" font-weight="700" text-anchor="start">DBML</text>
+<rect x="133.7" y="36.0" width="110.8" height="24.0" rx="12.0" fill="#E2EEFA" stroke="#2C6BC4" stroke-width="1"/>
+<text x="189.1" y="52.3" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12" fill="#14477E" font-weight="600" text-anchor="middle">JSON 标签 dbml</text>
+<text x="66.0" y="86.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#44556E" font-weight="400" text-anchor="start">数据库建模</text>
+<text x="66.0" y="112.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">样例 schema.dbml</text>
+<text x="66.0" y="136.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">实测：退出码 0 · 紧凑 JSON 3,007 字节</text>
+<text x="66.0" y="160.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">结构：5 条目（项目、表、表、枚举、引用）</text>
+<text x="532.0" y="86.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#44556E" font-weight="400" text-anchor="end">auto 识别 ✓ dbml</text>
+<text x="532.0" y="58.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#75879D" font-weight="400" text-anchor="end">指纹 3688963b22…</text>
+<rect x="582.0" y="24.0" width="518.0" height="176.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="582.0" y="24.0" width="6.0" height="176.0" rx="3" fill="#14477E"/>
+<text x="608.0" y="58.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="19" fill="#182841" font-weight="700" text-anchor="start">WaveDrom</text>
+<rect x="710.3" y="36.0" width="140.3" height="24.0" rx="12.0" fill="#E2EEFA" stroke="#2C6BC4" stroke-width="1"/>
+<text x="780.4" y="52.3" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12" fill="#14477E" font-weight="600" text-anchor="middle">JSON 标签 wave_drom</text>
+<text x="608.0" y="86.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#44556E" font-weight="400" text-anchor="start">时序波形 / 寄存器</text>
+<text x="608.0" y="112.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">样例 timing.json5</text>
+<text x="608.0" y="136.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">实测：退出码 0 · 紧凑 JSON 676 字节</text>
+<text x="608.0" y="160.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">结构：2 顶层信号 / 1 边</text>
+<text x="1074.0" y="86.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#44556E" font-weight="400" text-anchor="end">auto 识别 ✓ wave_drom</text>
+<text x="1074.0" y="58.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#75879D" font-weight="400" text-anchor="end">指纹 c222d9d16b…</text>
+<rect x="40.0" y="226.0" width="518.0" height="176.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="226.0" width="6.0" height="176.0" rx="3" fill="#14477E"/>
+<text x="66.0" y="260.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="19" fill="#182841" font-weight="700" text-anchor="start">D2</text>
+<rect x="105.6" y="238.0" width="98.4" height="24.0" rx="12.0" fill="#E2EEFA" stroke="#2C6BC4" stroke-width="1"/>
+<text x="154.8" y="254.3" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12" fill="#14477E" font-weight="600" text-anchor="middle">JSON 标签 d2</text>
+<text x="66.0" y="288.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#44556E" font-weight="400" text-anchor="start">声明式地图与边</text>
+<text x="66.0" y="314.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">样例 architecture.d2</text>
+<text x="66.0" y="338.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">实测：退出码 0 · 紧凑 JSON 1,685 字节</text>
+<text x="66.0" y="362.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">结构：6 条语句</text>
+<text x="532.0" y="288.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#44556E" font-weight="400" text-anchor="end">auto 识别 ✓ d2</text>
+<text x="532.0" y="260.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#75879D" font-weight="400" text-anchor="end">指纹 c186f1bef1…</text>
+<rect x="582.0" y="226.0" width="518.0" height="176.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="582.0" y="226.0" width="6.0" height="176.0" rx="3" fill="#14477E"/>
+<text x="608.0" y="260.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="19" fill="#182841" font-weight="700" text-anchor="start">Structurizr DSL</text>
+<rect x="781.7" y="238.0" width="155.3" height="24.0" rx="12.0" fill="#E2EEFA" stroke="#2C6BC4" stroke-width="1"/>
+<text x="859.4" y="254.3" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12" fill="#14477E" font-weight="600" text-anchor="middle">JSON 标签 structurizr</text>
+<text x="608.0" y="288.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#44556E" font-weight="400" text-anchor="start">架构模型 + 视图</text>
+<text x="608.0" y="314.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">样例 workspace.dsl</text>
+<text x="608.0" y="338.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">实测：退出码 0 · 紧凑 JSON 2,926 字节</text>
+<text x="608.0" y="362.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">结构：1 条语句</text>
+<text x="1074.0" y="288.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#44556E" font-weight="400" text-anchor="end">auto 识别 ✓ structurizr</text>
+<text x="1074.0" y="260.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#75879D" font-weight="400" text-anchor="end">指纹 88203ea62f…</text>
+<rect x="40.0" y="428.0" width="518.0" height="176.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="428.0" width="6.0" height="176.0" rx="3" fill="#14477E"/>
+<text x="66.0" y="462.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="19" fill="#182841" font-weight="700" text-anchor="start">LikeC4</text>
+<rect x="148.7" y="440.0" width="128.0" height="24.0" rx="12.0" fill="#E2EEFA" stroke="#2C6BC4" stroke-width="1"/>
+<text x="212.7" y="456.3" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12" fill="#14477E" font-weight="600" text-anchor="middle">JSON 标签 like_c4</text>
+<text x="66.0" y="490.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#44556E" font-weight="400" text-anchor="start">架构模型 + 规约</text>
+<text x="66.0" y="516.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">样例 model.c4</text>
+<text x="66.0" y="540.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">实测：退出码 0 · 紧凑 JSON 2,387 字节</text>
+<text x="66.0" y="564.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">结构：3 条语句</text>
+<text x="532.0" y="490.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#44556E" font-weight="400" text-anchor="end">auto 识别 ✓ like_c4</text>
+<text x="532.0" y="462.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#75879D" font-weight="400" text-anchor="end">指纹 79ad8aaece…</text>
+<rect x="582.0" y="428.0" width="518.0" height="176.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="582.0" y="428.0" width="6.0" height="176.0" rx="3" fill="#14477E"/>
+<text x="608.0" y="462.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="19" fill="#182841" font-weight="700" text-anchor="start">nomnoml</text>
+<rect x="694.5" y="440.0" width="129.9" height="24.0" rx="12.0" fill="#E2EEFA" stroke="#2C6BC4" stroke-width="1"/>
+<text x="759.4" y="456.3" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12" fill="#14477E" font-weight="600" text-anchor="middle">JSON 标签 nomnoml</text>
+<text x="608.0" y="490.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#44556E" font-weight="400" text-anchor="start">分类器与关系图</text>
+<text x="608.0" y="516.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">样例 classes.nomnoml</text>
+<text x="608.0" y="540.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">实测：退出码 0 · 紧凑 JSON 1,130 字节</text>
+<text x="608.0" y="564.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">结构：3 指令 / 2 语句</text>
+<text x="1074.0" y="490.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#44556E" font-weight="400" text-anchor="end">auto 识别 ✓ nomnoml</text>
+<text x="1074.0" y="462.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#75879D" font-weight="400" text-anchor="end">指纹 5c41f6bce8…</text>
+<rect x="40.0" y="630.0" width="518.0" height="176.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="630.0" width="6.0" height="176.0" rx="3" fill="#14477E"/>
+<text x="66.0" y="664.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="19" fill="#182841" font-weight="700" text-anchor="start">Pikchr</text>
+<rect x="145.3" y="642.0" width="123.5" height="24.0" rx="12.0" fill="#E2EEFA" stroke="#2C6BC4" stroke-width="1"/>
+<text x="207.0" y="658.3" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12" fill="#14477E" font-weight="600" text-anchor="middle">JSON 标签 pikchr</text>
+<text x="66.0" y="692.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14" fill="#44556E" font-weight="400" text-anchor="start">过程式几何绘图</text>
+<text x="66.0" y="718.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">样例 flow.pikchr</text>
+<text x="66.0" y="742.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">实测：退出码 0 · 紧凑 JSON 1,538 字节</text>
+<text x="66.0" y="766.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">结构：7 条语句</text>
+<text x="532.0" y="692.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#44556E" font-weight="400" text-anchor="end">auto 识别 ✓ pikchr</text>
+<text x="532.0" y="664.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#75879D" font-weight="400" text-anchor="end">指纹 676a1a3a30…</text>
+<rect x="582.0" y="630.0" width="518.0" height="176.0" rx="12" fill="#E2EEFA" stroke="#2C6BC4" stroke-width="1.2"/>
+<text x="608.0" y="664.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="18" fill="#14477E" font-weight="700" text-anchor="start">重建逐字节复现</text>
+<text x="608.0" y="696.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">冻结层存底的 7 份 AST 输出，由重建二进制重放解析：</text>
+<text x="608.0" y="722.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="15" fill="#182841" font-weight="600" text-anchor="start">7/7 逐字节一致 · 双跑 7/7 一致</text>
+<text x="608.0" y="748.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">每个指纹都可与冻结证据对表核对</text>
+<text x="608.0" y="776.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#75879D" font-weight="400" text-anchor="start">证据：冻结摘要 + 行为探测报告</text>
+</svg>

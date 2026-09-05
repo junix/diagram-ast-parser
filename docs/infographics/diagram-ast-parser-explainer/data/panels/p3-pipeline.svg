@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="760" viewBox="0 0 1140 760" role="img" aria-label="三条前端路径共享一套类型化出口">
+<rect x="0.0" y="0.0" width="1140.0" height="760.0" rx="10" fill="#FFFFFF"/>
+<rect x="40.0" y="28.0" width="1060.0" height="118.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="28.0" width="6.0" height="118.0" rx="3" fill="#8FB8EA"/>
+<text x="64.0" y="60.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">JSON5 路径</text>
+<rect x="64.0" y="74.0" width="78.8" height="24.0" rx="12.0" fill="#FFFFFF" stroke="#2C6BC4" stroke-width="1"/>
+<text x="103.4" y="90.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#14477E" font-weight="600" text-anchor="middle">WaveDrom</text>
+<rect x="64.0" y="90.0" width="306.7" height="34.0" rx="8" fill="#FFFFFF" stroke="#8FB8EA" stroke-width="1.3"/>
+<text x="217.3" y="112.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#14477E" font-weight="600" text-anchor="middle">源文本</text>
+<rect x="416.7" y="90.0" width="306.7" height="34.0" rx="8" fill="#FFFFFF" stroke="#8FB8EA" stroke-width="1.3"/>
+<text x="570.0" y="112.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#14477E" font-weight="600" text-anchor="middle">JSON5 解析器</text>
+<rect x="769.3" y="90.0" width="306.7" height="34.0" rx="8" fill="#FFFFFF" stroke="#8FB8EA" stroke-width="1.3"/>
+<text x="922.7" y="112.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#14477E" font-weight="600" text-anchor="middle">时序 / 寄存器语法树</text>
+<path d="M 374.7 107.0 L 412.7 107.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 412.7 107.0 L 405.9 110.3 L 405.9 103.7 Z" fill="#2C6BC4"/>
+<path d="M 727.3 107.0 L 765.3 107.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 765.3 107.0 L 758.6 110.3 L 758.6 103.7 Z" fill="#2C6BC4"/>
+<rect x="40.0" y="164.0" width="1060.0" height="118.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="164.0" width="6.0" height="118.0" rx="3" fill="#2C6BC4"/>
+<text x="64.0" y="196.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">花括号语句树路径</text>
+<rect x="64.0" y="210.0" width="56.0" height="24.0" rx="12.0" fill="#FFFFFF" stroke="#2C6BC4" stroke-width="1"/>
+<text x="92.0" y="226.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#14477E" font-weight="600" text-anchor="middle">DBML</text>
+<rect x="126.0" y="210.0" width="37.5" height="24.0" rx="12.0" fill="#FFFFFF" stroke="#2C6BC4" stroke-width="1"/>
+<text x="144.8" y="226.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#14477E" font-weight="600" text-anchor="middle">D2</text>
+<rect x="169.5" y="210.0" width="125.8" height="24.0" rx="12.0" fill="#FFFFFF" stroke="#2C6BC4" stroke-width="1"/>
+<text x="232.4" y="226.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#14477E" font-weight="600" text-anchor="middle">Structurizr DSL</text>
+<rect x="301.2" y="210.0" width="65.9" height="24.0" rx="12.0" fill="#FFFFFF" stroke="#2C6BC4" stroke-width="1"/>
+<text x="334.2" y="226.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#14477E" font-weight="600" text-anchor="middle">LikeC4</text>
+<rect x="373.1" y="210.0" width="63.6" height="24.0" rx="12.0" fill="#FFFFFF" stroke="#2C6BC4" stroke-width="1"/>
+<text x="404.9" y="226.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#14477E" font-weight="600" text-anchor="middle">Pikchr</text>
+<rect x="64.0" y="226.0" width="165.6" height="34.0" rx="8" fill="#FFFFFF" stroke="#2C6BC4" stroke-width="1.3"/>
+<text x="146.8" y="248.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#14477E" font-weight="600" text-anchor="middle">源文本</text>
+<rect x="275.6" y="226.0" width="165.6" height="34.0" rx="8" fill="#FFFFFF" stroke="#2C6BC4" stroke-width="1.3"/>
+<text x="358.4" y="248.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#14477E" font-weight="600" text-anchor="middle">可配置词法器</text>
+<rect x="487.2" y="226.0" width="165.6" height="34.0" rx="8" fill="#FFFFFF" stroke="#2C6BC4" stroke-width="1.3"/>
+<text x="570.0" y="248.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#14477E" font-weight="600" text-anchor="middle">花括号语句树</text>
+<rect x="698.8" y="226.0" width="165.6" height="34.0" rx="8" fill="#FFFFFF" stroke="#2C6BC4" stroke-width="1.3"/>
+<text x="781.6" y="248.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#14477E" font-weight="600" text-anchor="middle">格式分类器</text>
+<rect x="910.4" y="226.0" width="165.6" height="34.0" rx="8" fill="#FFFFFF" stroke="#2C6BC4" stroke-width="1.3"/>
+<text x="993.2" y="248.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#14477E" font-weight="600" text-anchor="middle">类型化构建器</text>
+<path d="M 233.6 243.0 L 271.6 243.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 271.6 243.0 L 264.9 246.3 L 264.9 239.7 Z" fill="#2C6BC4"/>
+<path d="M 445.2 243.0 L 483.2 243.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 483.2 243.0 L 476.5 246.3 L 476.5 239.7 Z" fill="#2C6BC4"/>
+<path d="M 656.8 243.0 L 694.8 243.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 694.8 243.0 L 688.1 246.3 L 688.1 239.7 Z" fill="#2C6BC4"/>
+<path d="M 868.4 243.0 L 906.4 243.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 906.4 243.0 L 899.7 246.3 L 899.7 239.7 Z" fill="#2C6BC4"/>
+<rect x="40.0" y="300.0" width="1060.0" height="118.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<rect x="40.0" y="300.0" width="6.0" height="118.0" rx="3" fill="#8FB8EA"/>
+<text x="64.0" y="332.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">平衡扫描路径</text>
+<rect x="64.0" y="346.0" width="68.4" height="24.0" rx="12.0" fill="#FFFFFF" stroke="#2C6BC4" stroke-width="1"/>
+<text x="98.2" y="362.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="12.5" fill="#14477E" font-weight="600" text-anchor="middle">nomnoml</text>
+<rect x="64.0" y="362.0" width="306.7" height="34.0" rx="8" fill="#FFFFFF" stroke="#8FB8EA" stroke-width="1.3"/>
+<text x="217.3" y="384.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#14477E" font-weight="600" text-anchor="middle">源文本</text>
+<rect x="416.7" y="362.0" width="306.7" height="34.0" rx="8" fill="#FFFFFF" stroke="#8FB8EA" stroke-width="1.3"/>
+<text x="570.0" y="384.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#14477E" font-weight="600" text-anchor="middle">平衡分类器扫描器</text>
+<rect x="769.3" y="362.0" width="306.7" height="34.0" rx="8" fill="#FFFFFF" stroke="#8FB8EA" stroke-width="1.3"/>
+<text x="922.7" y="384.5" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#14477E" font-weight="600" text-anchor="middle">分类器 / 关系语法树</text>
+<path d="M 374.7 379.0 L 412.7 379.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 412.7 379.0 L 405.9 382.3 L 405.9 375.7 Z" fill="#2C6BC4"/>
+<path d="M 727.3 379.0 L 765.3 379.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 765.3 379.0 L 758.6 382.3 L 758.6 375.7 Z" fill="#2C6BC4"/>
+<path d="M 570.0 426.0 L 570.0 438.0" stroke="#2C6BC4" stroke-width="1.6" fill="none"/>
+<path d="M 570.0 438.0 L 566.7 431.3 L 573.3 431.3 Z" fill="#2C6BC4"/>
+<rect x="190.0" y="442.0" width="760.0" height="64.0" rx="12" fill="#14477E"/>
+<text x="570.0" y="482.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="18" fill="#FFFFFF" font-weight="700" text-anchor="middle">七套专用语法树 · 统一文档信封 · 序列化为 JSON</text>
+<rect x="40.0" y="530.0" width="1060.0" height="206.0" rx="12" fill="#F2F7FD" stroke="#D5DFEB" stroke-width="1"/>
+<text x="64.0" y="562.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="15.5" fill="#182841" font-weight="700" text-anchor="start">词法层的共同约定（如实呈现）</text>
+<text x="64.0" y="592.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">· 单引号 / 双引号 / 三引号 / DBML 反引号字符串（按语言启用）</text>
+<text x="64.0" y="618.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">· 行注释 / 块注释按语言选择</text>
+<text x="64.0" y="644.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">· 拒绝不闭合的字符串与块定界符</text>
+<text x="64.0" y="670.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">· 花括号系解析器受嵌套深度上限约束</text>
+<text x="64.0" y="696.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#44556E" font-weight="400" text-anchor="start">· JSON5 嵌套与 nomnoml 嵌套分类文本当前不受深度上限约束（引擎如实声明）</text>
+</svg>

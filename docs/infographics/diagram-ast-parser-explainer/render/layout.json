@@ -1,0 +1,107 @@
+{
+  "page_width": 1200,
+  "page_height": 7310,
+  "dpr": 2,
+  "full2x_expected": [
+    2400,
+    14620
+  ],
+  "viewport_css": 1000,
+  "slice_count": 8,
+  "scroll_assertions": 8,
+  "scroll_assertions_ok": true,
+  "zero_external_requests": true,
+  "request_count": 1,
+  "sections": [
+    {
+      "id": "p1-hero",
+      "top": 271,
+      "height": 884
+    },
+    {
+      "id": "p2-formats",
+      "top": 1154,
+      "height": 967
+    },
+    {
+      "id": "p3-pipeline",
+      "top": 2122,
+      "height": 924
+    },
+    {
+      "id": "p4-span-error",
+      "top": 3045,
+      "height": 817
+    },
+    {
+      "id": "p5-auto",
+      "top": 3862,
+      "height": 757
+    },
+    {
+      "id": "p6-limits",
+      "top": 4620,
+      "height": 813
+    },
+    {
+      "id": "p7-compat",
+      "top": 5433,
+      "height": 921
+    },
+    {
+      "id": "p8-verify",
+      "top": 6354,
+      "height": 777
+    }
+  ],
+  "scrolls": [
+    {
+      "slice": 0,
+      "scrollTo": 0,
+      "scrollY": 0,
+      "ok": true
+    },
+    {
+      "slice": 1,
+      "scrollTo": 1000,
+      "scrollY": 1000,
+      "ok": true
+    },
+    {
+      "slice": 2,
+      "scrollTo": 2000,
+      "scrollY": 2000,
+      "ok": true
+    },
+    {
+      "slice": 3,
+      "scrollTo": 3000,
+      "scrollY": 3000,
+      "ok": true
+    },
+    {
+      "slice": 4,
+      "scrollTo": 4000,
+      "scrollY": 4000,
+      "ok": true
+    },
+    {
+      "slice": 5,
+      "scrollTo": 5000,
+      "scrollY": 5000,
+      "ok": true
+    },
+    {
+      "slice": 6,
+      "scrollTo": 6000,
+      "scrollY": 6000,
+      "ok": true
+    },
+    {
+      "slice": 7,
+      "scrollTo": 6310,
+      "scrollY": 6310,
+      "ok": true
+    }
+  ]
+}

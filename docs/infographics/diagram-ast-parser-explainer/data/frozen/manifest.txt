@@ -1,0 +1,10 @@
+# 一次性冻结证据（绝不重测覆盖）
+# 产生方式: git archive HEAD -> /tmp 平面拷贝 -> 真实 cargo build/test + 真实 CLI 转录
+engine_head=8cfbfe572d5f6e18a0bb6e45d30187816f69f872
+engine_porcelain_dirty_entries=1
+archive_files=47
+frozen_at=2026-09-05T13:30:48Z
+cargo=cargo 1.98.0 (797e8a9bc 2026-08-05) (Homebrew)
+rustc=rustc 1.98.0 (88d9e12ae 2026-08-18) (Homebrew)
+os=Darwin arm64 / 26.5
+build_mode=--release --offline（冷 target，一次性计时）

@@ -1,0 +1,371 @@
+{
+  "all_ok": true,
+  "claims": [
+    {
+      "actual": 7,
+      "claim": "7 种解析格式",
+      "evidence": "data/rebuild/structure.json#format_modules",
+      "expected": 7,
+      "ok": true,
+      "panel": "p1-hero"
+    },
+    {
+      "actual": "23+1",
+      "claim": "源文件 23+1",
+      "evidence": "data/rebuild/structure.json#rust_source_files/rust_test_files",
+      "expected": "23+1",
+      "ok": true,
+      "panel": "p1-hero"
+    },
+    {
+      "actual": 4715,
+      "claim": "总行数 4,715",
+      "evidence": "data/rebuild/structure.json#loc.total",
+      "expected": 4715,
+      "ok": true,
+      "panel": "p1-hero"
+    },
+    {
+      "actual": 12,
+      "claim": "测试通过数 = 集成测试声明数",
+      "evidence": "frozen#tests_passed vs structure#tests_declared",
+      "expected": 12,
+      "ok": true,
+      "panel": "p1-hero"
+    },
+    {
+      "actual": "1.85",
+      "claim": "最低 Rust 版本 1.85",
+      "evidence": "structure#msrv",
+      "expected": "1.85",
+      "ok": true,
+      "panel": "p1-hero"
+    },
+    {
+      "actual": 4,
+      "claim": "4 项依赖全部精确锁版",
+      "evidence": "structure#dependencies_exact_pinned",
+      "expected": 4,
+      "ok": true,
+      "panel": "p1-hero"
+    },
+    {
+      "actual": 0,
+      "claim": "d2 退出码 0",
+      "evidence": "formats#formats.d2.rc",
+      "expected": 0,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": 1685,
+      "claim": "d2 JSON 字节数",
+      "evidence": "frozen#cli_formats.d2.ast_bytes",
+      "expected": 1685,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": "d2",
+      "claim": "d2 JSON 标签",
+      "evidence": "formats#formats.d2.json_tag",
+      "expected": "d2",
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": "c186f1bef1",
+      "claim": "d2 指纹前缀",
+      "evidence": "frozen#cli_formats.d2.ast_sha256[:10]",
+      "expected": "c186f1bef1",
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": 0,
+      "claim": "dbml 退出码 0",
+      "evidence": "formats#formats.dbml.rc",
+      "expected": 0,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": 3007,
+      "claim": "dbml JSON 字节数",
+      "evidence": "frozen#cli_formats.dbml.ast_bytes",
+      "expected": 3007,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": "dbml",
+      "claim": "dbml JSON 标签",
+      "evidence": "formats#formats.dbml.json_tag",
+      "expected": "dbml",
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": "3688963b22",
+      "claim": "dbml 指纹前缀",
+      "evidence": "frozen#cli_formats.dbml.ast_sha256[:10]",
+      "expected": "3688963b22",
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": 0,
+      "claim": "likec4 退出码 0",
+      "evidence": "formats#formats.likec4.rc",
+      "expected": 0,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": 2387,
+      "claim": "likec4 JSON 字节数",
+      "evidence": "frozen#cli_formats.likec4.ast_bytes",
+      "expected": 2387,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": "like_c4",
+      "claim": "likec4 JSON 标签",
+      "evidence": "formats#formats.likec4.json_tag",
+      "expected": "like_c4",
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": "79ad8aaece",
+      "claim": "likec4 指纹前缀",
+      "evidence": "frozen#cli_formats.likec4.ast_sha256[:10]",
+      "expected": "79ad8aaece",
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": 0,
+      "claim": "nomnoml 退出码 0",
+      "evidence": "formats#formats.nomnoml.rc",
+      "expected": 0,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": 1130,
+      "claim": "nomnoml JSON 字节数",
+      "evidence": "frozen#cli_formats.nomnoml.ast_bytes",
+      "expected": 1130,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": "nomnoml",
+      "claim": "nomnoml JSON 标签",
+      "evidence": "formats#formats.nomnoml.json_tag",
+      "expected": "nomnoml",
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": "5c41f6bce8",
+      "claim": "nomnoml 指纹前缀",
+      "evidence": "frozen#cli_formats.nomnoml.ast_sha256[:10]",
+      "expected": "5c41f6bce8",
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": 0,
+      "claim": "pikchr 退出码 0",
+      "evidence": "formats#formats.pikchr.rc",
+      "expected": 0,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": 1538,
+      "claim": "pikchr JSON 字节数",
+      "evidence": "frozen#cli_formats.pikchr.ast_bytes",
+      "expected": 1538,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": "pikchr",
+      "claim": "pikchr JSON 标签",
+      "evidence": "formats#formats.pikchr.json_tag",
+      "expected": "pikchr",
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": "676a1a3a30",
+      "claim": "pikchr 指纹前缀",
+      "evidence": "frozen#cli_formats.pikchr.ast_sha256[:10]",
+      "expected": "676a1a3a30",
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": 0,
+      "claim": "structurizr 退出码 0",
+      "evidence": "formats#formats.structurizr.rc",
+      "expected": 0,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": 2926,
+      "claim": "structurizr JSON 字节数",
+      "evidence": "frozen#cli_formats.structurizr.ast_bytes",
+      "expected": 2926,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": "structurizr",
+      "claim": "structurizr JSON 标签",
+      "evidence": "formats#formats.structurizr.json_tag",
+      "expected": "structurizr",
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": "88203ea62f",
+      "claim": "structurizr 指纹前缀",
+      "evidence": "frozen#cli_formats.structurizr.ast_sha256[:10]",
+      "expected": "88203ea62f",
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": 0,
+      "claim": "wavedrom 退出码 0",
+      "evidence": "formats#formats.wavedrom.rc",
+      "expected": 0,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": 676,
+      "claim": "wavedrom JSON 字节数",
+      "evidence": "frozen#cli_formats.wavedrom.ast_bytes",
+      "expected": 676,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": "wave_drom",
+      "claim": "wavedrom JSON 标签",
+      "evidence": "formats#formats.wavedrom.json_tag",
+      "expected": "wave_drom",
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": "c222d9d16b",
+      "claim": "wavedrom 指纹前缀",
+      "evidence": "frozen#cli_formats.wavedrom.ast_sha256[:10]",
+      "expected": "c222d9d16b",
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": true,
+      "claim": "重建 7/7 逐字节复现",
+      "evidence": "formats#rebuild_reproduce_all",
+      "expected": true,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": true,
+      "claim": "双跑 7/7 一致",
+      "evidence": "formats#double_run_all_identical",
+      "expected": true,
+      "ok": true,
+      "panel": "p2-formats"
+    },
+    {
+      "actual": 1,
+      "claim": "未闭合块演示退出码 1",
+      "evidence": "behavior#errors.d2_unterminated.rc",
+      "expected": 1,
+      "ok": true,
+      "panel": "p4-span-error"
+    },
+    {
+      "actual": [
+        "column",
+        "format",
+        "line",
+        "message",
+        "span"
+      ],
+      "claim": "诊断字段 = 契约五键",
+      "evidence": "behavior#errors.d2_unterminated.json vs pipeline#error_json_keys",
+      "expected": [
+        "column",
+        "format",
+        "line",
+        "message",
+        "span"
+      ],
+      "ok": true,
+      "panel": "p4-span-error"
+    },
+    {
+      "actual": true,
+      "claim": "auto 矩阵 7/7 一致",
+      "evidence": "behavior#auto_matrix_all_match",
+      "expected": true,
+      "ok": true,
+      "panel": "p5-auto"
+    },
+    {
+      "actual": 1,
+      "claim": "超限演示退出码 1",
+      "evidence": "behavior#errors.input_size_limit.rc",
+      "expected": 1,
+      "ok": true,
+      "panel": "p6-limits"
+    },
+    {
+      "actual": true,
+      "claim": "超限信息含「超出配置上限」语义",
+      "evidence": "behavior#errors.input_size_limit.raw",
+      "expected": true,
+      "ok": true,
+      "panel": "p6-limits"
+    },
+    {
+      "actual": true,
+      "claim": "退出码 0/1/2 均实测",
+      "evidence": "pipeline#exit_codes[0..2].observed",
+      "expected": true,
+      "ok": true,
+      "panel": "p6-limits"
+    },
+    {
+      "actual": 11.16,
+      "claim": "构建耗时来自冻结层",
+      "evidence": "frozen#build_secs",
+      "expected": 11.16,
+      "ok": true,
+      "panel": "p8-verify"
+    },
+    {
+      "actual": 10.11,
+      "claim": "测试耗时来自冻结层",
+      "evidence": "frozen#test_secs",
+      "expected": 10.11,
+      "ok": true,
+      "panel": "p8-verify"
+    }
+  ],
+  "count": 44,
+  "kind": "page_claims"
+}

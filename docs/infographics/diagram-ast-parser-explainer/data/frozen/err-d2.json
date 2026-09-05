@@ -1,0 +1,7 @@
+{
+  "format": "d2",
+  "message": "unterminated block: expected `}`",
+  "span": null,
+  "line": 1,
+  "column": 1
+}

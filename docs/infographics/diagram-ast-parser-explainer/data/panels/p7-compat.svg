@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="784" viewBox="0 0 1140 784" role="img" aria-label="兼容矩阵：已实现与有意推迟">
+<rect x="0.0" y="0.0" width="1140.0" height="784.0" rx="10" fill="#FFFFFF"/>
+<text x="40.0" y="40.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14.5" fill="#44556E" font-weight="400" text-anchor="start">每一行都来自引擎自述的兼容矩阵（中文意译）：解析成功只代表结构可表示，</text>
+<text x="40.0" y="64.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14.5" fill="#44556E" font-weight="400" text-anchor="start">不代表上游渲染器会语义接受同一份源。</text>
+<text x="300.0" y="92.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14.5" fill="#14477E" font-weight="700" text-anchor="start">已实现</text>
+<text x="750.0" y="92.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="14.5" fill="#75879D" font-weight="700" text-anchor="start">有意推迟（留给后续阶段）</text>
+<rect x="40.0" y="110.0" width="1060.0" height="82.0" rx="10" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<text x="60.0" y="142.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">DBML</text>
+<text x="314.0" y="140.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#182841" font-weight="400" text-anchor="start">项目、表、表局部、列与设置、索引、检查约束、枚举、引用、</text>
+<text x="314.0" y="161.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#182841" font-weight="400" text-anchor="start">表组、注记</text>
+<text x="764.0" y="140.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">模块导入解析、数据血缘扩展、SQL 生成、语义重</text>
+<text x="764.0" y="161.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">复/类型检查</text>
+<rect x="40.0" y="204.0" width="1060.0" height="82.0" rx="10" fill="#FFFFFF" stroke="#D5DFEB" stroke-width="1"/>
+<text x="60.0" y="236.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">WaveDrom</text>
+<text x="314.0" y="234.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#182841" font-weight="400" text-anchor="start">JSON5 输入、嵌套信号组、lanes、data、节点、相位/周期、</text>
+<text x="314.0" y="255.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#182841" font-weight="400" text-anchor="start">边、头尾、寄存器字段、未知字段保留</text>
+<text x="764.0" y="234.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">波形符号校验、边语法校验、渲染语义</text>
+<rect x="40.0" y="298.0" width="1060.0" height="82.0" rx="10" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<text x="60.0" y="330.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">D2</text>
+<text x="314.0" y="328.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#182841" font-weight="400" text-anchor="start">条目/映射、标量标签、边链、边属性映射、常规/展开导入</text>
+<text x="764.0" y="328.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">替换、变量、通配、类、导入装载、形状/属性校</text>
+<text x="764.0" y="349.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">验、board/layer/scenario 语义</text>
+<rect x="40.0" y="392.0" width="1060.0" height="82.0" rx="10" fill="#FFFFFF" stroke="#D5DFEB" stroke-width="1"/>
+<text x="60.0" y="424.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">Structurizr DSL</text>
+<text x="314.0" y="422.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#182841" font-weight="400" text-anchor="start">workspace、模型层级、公共元素、关系、指令、通用块/属性、</text>
+<text x="314.0" y="443.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#182841" font-weight="400" text-anchor="start">视图即块</text>
+<text x="764.0" y="422.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">include/script/plugin、表达式求值、标识符解</text>
+<text x="764.0" y="443.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">析、隐含关系、原型展开、视图计算</text>
+<rect x="40.0" y="486.0" width="1060.0" height="82.0" rx="10" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<text x="60.0" y="518.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">LikeC4</text>
+<text x="314.0" y="516.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#182841" font-weight="400" text-anchor="start">specification 种类、模型层级、普通/带种类关系、标签、视</text>
+<text x="314.0" y="537.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#182841" font-weight="400" text-anchor="start">图、extend、部署节点与实例引用</text>
+<text x="764.0" y="516.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">多文件合并、词法作用域解析、谓词、继承、部署</text>
+<text x="764.0" y="537.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">展开、视图计算、样式校验</text>
+<rect x="40.0" y="580.0" width="1060.0" height="82.0" rx="10" fill="#FFFFFF" stroke="#D5DFEB" stroke-width="1"/>
+<text x="60.0" y="612.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">nomnoml</text>
+<text x="314.0" y="610.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#182841" font-weight="400" text-anchor="start">指令/自定义样式、分类器类型/属性、隔间、二元关系与端点标</text>
+<text x="314.0" y="631.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#182841" font-weight="400" text-anchor="start">签</text>
+<text x="764.0" y="610.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">超过两个顶层分类器的关系链、布局/配置校验、嵌</text>
+<text x="764.0" y="631.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">套图语义分析</text>
+<rect x="40.0" y="674.0" width="1060.0" height="82.0" rx="10" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
+<text x="60.0" y="706.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16.5" fill="#182841" font-weight="700" text-anchor="start">Pikchr</text>
+<text x="314.0" y="704.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#182841" font-weight="400" text-anchor="start">对象、标签、方向、赋值、define 块、print、assert、命名位</text>
+<text x="314.0" y="725.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#182841" font-weight="400" text-anchor="start">置；属性以 token 保留</text>
+<text x="764.0" y="704.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">表达式优先级 AST、对象/位置引用解析、宏展开、</text>
+<text x="764.0" y="725.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13" fill="#75879D" font-weight="400" text-anchor="start">几何求值</text>
+</svg>

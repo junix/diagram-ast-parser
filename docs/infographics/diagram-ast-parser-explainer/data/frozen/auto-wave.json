@@ -1,0 +1,1 @@
+{"format":"wave_drom","ast":{"span":{"start":0,"end":43},"timing":{"signal":[{"kind":"lane","value":{"name":"clk","wave":"p...","data":[],"node":null,"phase":null,"period":null,"extra":{}}}],"edges":[],"head":null,"foot":null,"config":null},"register":null,"extra":{}}}

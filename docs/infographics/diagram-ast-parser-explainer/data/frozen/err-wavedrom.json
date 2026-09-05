@@ -1,0 +1,7 @@
+{
+  "format": "wave_drom",
+  "message": "register field `bits` must be an unsigned integer",
+  "span": null,
+  "line": 1,
+  "column": 1
+}
