@@ -11,6 +11,7 @@ LikeC4 / nomnoml / Pikchr 七种文本图示语言解析为可序列化语法树
 |---|---|---|
 | `index.html` | 可重建 | 成品长图（内嵌全部 SVG 面板） |
 | `data/frozen/` | **一次性冻结** | 真实构建/测试/CLI 转录的一次性记录（耗时/计数/尺寸/AST 原文与哈希），绝不重测覆盖 |
+| `data/audit/post-commit.md` | 指纹豁免 | 提交后门禁复跑记录（跑一次记一次；不参与指纹登记，防「再提交→再复跑」死循环） |
 | `data/rebuild/` | 可重建（确定性） | 静态普查、行为探测（重建二进制重放 7 格式并逐字节比对冻结 AST）、管线/兼容数据、门禁与检查报告、声明对表 |
 | `data/panels/` | 可重建 | 8 张面板的独立 SVG（与页面内嵌字节同源） |
 | `render/` | 可重建 | full@2x.png（宽 2400 == 1200×2、高 == 页高×2 双硬断言）、灰度版、缩略图、分节裁剪图、layout.json |
@@ -50,16 +51,24 @@ LikeC4 / nomnoml / Pikchr 七种文本图示语言解析为可序列化语法树
   `<build-dir>`、`<ts>` 占位符归一化；当前无任何字段需要，见披露 D01）。
 - `TREE_DIR` 本身可以是真树或 /tmp 拷贝（真空复跑即这么做），产物不嵌入树路径。
 - `freeze_once.sh` 与 `vacuum_rerun.sh` 有一次性守卫：目标证据已存在即拒绝执行。
-- 每次链入口先过引擎门禁：HEAD 必须等于冻结提交，porcelain 只允许本交付树
-  （与外部治理 README），否则硬失败。
+- 每次链入口先过引擎门禁（两态）：「证据漂移」（冻结层 manifest 的 engine_head 与
+  工具常量不一致）与 porcelain 越界条目**硬失败**；「引擎已演进」（HEAD 不等于冻结
+  提交——交付提交落地后主检出的正常状态）仅 **stderr 警告并放行**，此时按下面
+  「复跑步骤」第 0 步把 ENGINE_REPO 指到冻结 worktree 后再复跑。
 
 ## 复跑步骤
 
 ```bash
-export ENGINE_REPO=/Users/junix/projects/plot/diagram-ast-parser   # 引擎仓（只读）
-export TREE_DIR=$ENGINE_REPO/docs/infographics/diagram-ast-parser-explainer
+export ORIG_REPO=/Users/junix/projects/plot/diagram-ast-parser   # 引擎仓主检出（只读）
+export TREE_DIR=$ORIG_REPO/docs/infographics/diagram-ast-parser-explainer
 export WORK_DIR=$(mktemp -d /tmp/ign-dap.XXXXXX)                   # 用完即删
 export PYTHONDONTWRITEBYTECODE=1
+
+# 0) 冻结 worktree（复跑入口，交付提交落地后必做）：主检出 HEAD 已演进过冻结提交
+#    8cfbfe5，门禁对此只「引擎已演进」警告放行；完全复现冻结证据须把 ENGINE_REPO
+#    指到冻结提交的 worktree（本树自身在冻结提交时尚未入库，TREE_DIR 仍用真树）
+git -C "$ORIG_REPO" worktree add "$WORK_DIR/engine-frozen" 8cfbfe5
+export ENGINE_REPO="$WORK_DIR/engine-frozen"
 
 # 1) 一次性冻结（仅 data/frozen/manifest.txt 缺失时；随树分发后禁止重跑）
 bash "$TREE_DIR/tools/freeze_once.sh"
@@ -75,6 +84,10 @@ bash "$TREE_DIR/tools/vacuum_rerun.sh"
 ( cd "$WORK_DIR/py" && python3 fingerprint.py write \
   && python3 verification.py \
   && python3 fingerprint.py check )   # 以登记表为准，无未登记产物
+
+# 5) 提交后复跑记录：把第 0 步配方与门禁的实际执行结果记入
+#    data/audit/post-commit.md（指纹豁免）；worktree 用毕即删：
+#    git -C "$ORIG_REPO" worktree remove "$WORK_DIR/engine-frozen"
 ```
 
 依赖：python3（含 PIL）、node（≥21，全局 WebSocket）、cargo + 离线注册表缓存

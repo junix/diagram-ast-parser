@@ -46,7 +46,7 @@
     {
       "id": "D08",
       "title": "指纹登记的自指排除",
-      "body": "指纹登记表排除 data/fingerprints.json（登记表自身，防自指漂移）与 VERIFICATION.md（内嵌指纹表）。除此两件与 *.failed.txt（冻结失败留档，非证据）外全树登记。",
+      "body": "指纹登记表排除 data/fingerprints.json（登记表自身，防自指漂移）、VERIFICATION.md（内嵌指纹表）与 data/audit/post-commit.md（提交后门禁复跑记录，2026-09-06 refine 起：跑一次记一次，若入指纹会迫使再提交再复跑，无收敛点）。除此三件与 *.failed.txt（冻结失败留档，非证据）外全树登记。",
       "anchor": "tools/fingerprint.py EXCLUDED"
     },
     {

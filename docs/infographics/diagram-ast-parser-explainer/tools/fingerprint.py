@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """产物指纹登记表：write 生成 data/fingerprints.json；check 以登记表为准核对全树。
 
-登记范围：交付树内全部文件。排除（自指，须披露）：
+登记范围：交付树内全部文件。排除（自指/无收敛点，须披露）：
   data/fingerprints.json（登记表自身——自指行记写前旧 sha 造成链式漂移）
   VERIFICATION.md（内嵌指纹表，自指）
+  data/audit/post-commit.md（提交后门禁复跑记录——跑一次记一次，若入指纹会
+    迫使再提交再复跑，无收敛点；2026-09-06 refine 起）
   *.failed.txt（一次性冻结失败留档，非证据）
 遇到 .DS_Store、__pycache__、*.pyc 直接硬失败（交付树内不应存在）。
 
@@ -16,7 +18,7 @@ import json
 import os
 import sys
 
-EXCLUDED = {"data/fingerprints.json", "VERIFICATION.md"}
+EXCLUDED = {"data/fingerprints.json", "VERIFICATION.md", "data/audit/post-commit.md"}
 
 
 def fail(msg: str) -> None:

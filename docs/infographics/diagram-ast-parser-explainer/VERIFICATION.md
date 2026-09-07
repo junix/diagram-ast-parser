@@ -84,11 +84,11 @@
 
 ## 5. 产物指纹表
 
-算法 sha256；登记 71 项；自指排除：`VERIFICATION.md`, `data/fingerprints.json`（与 *.failed.txt）。
+算法 sha256；登记 71 项；自指排除：`VERIFICATION.md`, `data/audit/post-commit.md`, `data/fingerprints.json`（与 *.failed.txt）。
 
 | 文件 | sha256 |
 |---|---|
-| `README.md` | `67b1030e35b0df087631571faeda19b31ad46b86f3e1f496ed337722ef27509c` |
+| `README.md` | `85577f999a3e291e65b69320b3e3df27bf7d5524e39ad952e1864062bf93296f` |
 | `data/frozen/ast/d2.json` | `c186f1bef1fbb0e7f5c31697cf91fefdd7b7d9f056bd24313841c78fb27ca954` |
 | `data/frozen/ast/dbml.json` | `3688963b227f8a9ada25c29ea13dc9192e4e51a9fdf696a54c9ce701ac72bf1f` |
 | `data/frozen/ast/dbml.pretty.json` | `21a9fe074dd9d842e5ae2a625691287cf07ceae781880ef20bd55a7bdff0d7a5` |
@@ -143,11 +143,11 @@
 | `render/thumb.png` | `d619f8f07f93f1747062420f05f7b5bdc8b34b0c0d6430da6a4b0ffa235fafbd` |
 | `tools/allowlist.json` | `47836582936eed88d10ff8c4389550e1f5fe996aea2cff162b0cf9ca836f26d9` |
 | `tools/build_page.py` | `844eac3ebb8ec1f10efb02b2e4578a3c3bde6b17a5505ff232e556034b1eff59` |
-| `tools/check_engine.py` | `0df1b905505565990d5a313c115806a8be597972edcd1b75e93561f14a586041` |
+| `tools/check_engine.py` | `5a47ce5c77bd4aa8be520928b3e32b81e67d89cf503f56318dcc8cb90eb2d131` |
 | `tools/cmp_artifacts.py` | `9732ba57a386a47b3b02eaf61c0e8cdc2874e58c987efc125fda50d918735aaf` |
-| `tools/disclosures.json` | `007ff5d12dd45de5574aaff8715de13cf40cc4ad508c2f15af097f30f867aa3d` |
+| `tools/disclosures.json` | `0b09b9f95af2acde2ee0086e2cbe4255d2ea0426bd89585d9b95d93420cf7b2d` |
 | `tools/export_static.py` | `549f4b2648611c008db0d4b812be0f9e8b10fca1ae2500ddfd0fec67b05c0079` |
-| `tools/fingerprint.py` | `927035a8b985df663066efc292fedff169cff269cb10d0af641c20c9adb061dc` |
+| `tools/fingerprint.py` | `2ae27b4ff1dd020d8bd78c5af163747d038ac8859d7ab205def42d489b01da8a` |
 | `tools/freeze_once.sh` | `83d1e2a8cc76f7e13a690b1727e7e990d7e230d3928614b39b13169e14387e82` |
 | `tools/gate_check.py` | `fee9defe2e7cd9176f64d62fc8700462684b0277611cc14ea4d804c775d54819` |
 | `tools/panels.py` | `51f970b633412c20fc48624e4f08eded2e45cc8112278158589dbf1541194f5b` |
@@ -169,7 +169,7 @@
 - **D05 auto 触发条件为源码逻辑的中文概括**：p5 面板各级触发条件是引擎格式识别函数逻辑的中文概括（关键词为公开 DSL 关键字）；判定矩阵（fixture→识别结果）为重建二进制真实重放实测，7/7 与冻结层一致。（锚点：`data/rebuild/pipeline.json#auto_detect_order + behavior.json#auto_matrix_observed`）
 - **D06 p4 区间刻度为示意、字节总数为真值**：p4 面板左侧的示例 DSL 行与字节刻度为示意教学图（该行非引擎仓内容）；展示的字节总数按同一字符串实际 UTF-8 编码长度计算（真值），刻度线位置按等宽近似绘制，已在图内标注「刻度示意」。右侧诊断 JSON 为真实命令行输出的逐字转录。（锚点：`tools/panels.py p4 + data/rebuild/behavior.json#errors.d2_unterminated.raw`）
 - **D07 门禁放行判例（逐条）**：④标识符禁按判例放行：产品/CLI 名（diagram-ast-parser、diagram-parse）；CLI 动词与 --format 取值（auto/dbml/wavedrom/d2/structurizr/likec4/nomnoml/pikchr 及别名 wavejson/structurizr-dsl/c4/pic）；公开格式与生态名（DBML/WaveDrom/D2/Structurizr/LikeC4/C4/nomnoml/Pikchr/JSON/JSON5/Rust/cargo/clap/serde 系）；公开 DSL 关键字（signal/reg/wave/table/ref/enum/workspace/softwaresystem/systemcontext/container/specification/model/views/box/circle/arrow 等，见 allowlist.json 全表）；JSON 契约键与 format/kind 枚举值由门禁在构建期从冻结 AST 与诊断证据自动采收放行；少量通用英文词（input/output/parse/source/span/line/column/message/format 等）按通用语放行并在 allowlist 登记理由。①文件名禁放行：7 个 fixture 名与 Cargo.toml/Cargo.lock（生态 manifest 名）。②行号禁对真实转录 zone 内的 line/column 字段值豁免（契约值）。③摘录禁对命中区间完整落在放行 zone（真实 CLI 转录原文、CLI flag、AST 信封示例）内豁免。（锚点：`tools/allowlist.json + tools/gate_check.py`）
-- **D08 指纹登记的自指排除**：指纹登记表排除 data/fingerprints.json（登记表自身，防自指漂移）与 VERIFICATION.md（内嵌指纹表）。除此两件与 *.failed.txt（冻结失败留档，非证据）外全树登记。（锚点：`tools/fingerprint.py EXCLUDED`）
+- **D08 指纹登记的自指排除**：指纹登记表排除 data/fingerprints.json（登记表自身，防自指漂移）、VERIFICATION.md（内嵌指纹表）与 data/audit/post-commit.md（提交后门禁复跑记录，2026-09-06 refine 起：跑一次记一次，若入指纹会迫使再提交再复跑，无收敛点）。除此三件与 *.failed.txt（冻结失败留档，非证据）外全树登记。（锚点：`tools/fingerprint.py EXCLUDED`）
 - **D09 渲染依赖固定版 chrome-headless-shell 与系统字体**：截图用固定版 chrome-headless-shell（playwright 缓存 chromium_headless_shell-1234，舰队同机共用；去 --headless=new，加 --disable-gpu + srgb 色彩剖面固定光栅路径）与系统字体（PingFang SC 等）。真空复跑位图比对首选逐字节；PNG 编码差异时退路为像素零差 + PNG 辅助块归一化后一致（本树 PNG 均经 magick 剥除日期/时间块，双跑逐字节一致）。换机器或换 shell 版本渲染像素可能不同。（锚点：`tools/render_page.mjs + tools/stitch.py + render/layout.json`）
 - **D10 SVG 静态检查使用默认 recommended 档**：逐张 rc=0 且 0 缺陷以 svg-linter 默认 recommended profile 判定（稳定规则集）；预览类规则不计入该声明。文本布局按字体度量近似估算并保守换行。（锚点：`data/rebuild/lint-report.json`）
 - **D11 渲染切片为瞬态中间产物**：CDP 切片在拼接完成后即删除（render/slices/ 不留档）；layout.json 保留每片 scrollTo/scrollY 断言记录与零外部请求断言供复核。（锚点：`render/layout.json scrolls`）
@@ -199,4 +199,42 @@ cmp_artifacts: 两树产物等价（判据内一致）
 ---- 指纹终检 ----
 真空报告自身须先被登记：真空后执行 fingerprint.py write -> verification.py -> check（见 README）
 ```
+
+## 8. 2026-09-06 refine（fleet-refine 批次）
+
+本节为 refine 批次人工追加（§1–§7 由 verification.py 机器生成；本文件为指纹豁免文档，
+机生部分已随本批指纹刷新重新生成，改动仅限豁免清单、4 项哈希与 D08 措辞）。
+
+### 修复（1 项 high）
+
+- **gate-selfbite（high，survey b39）**：`tools/check_engine.py` 原对「HEAD != 冻结值」
+  一律硬失败——交付提交 58181a5 落地后主检出 HEAD 演进，冻结/重建/渲染/真空全部链入口
+  自咬（修复前实测 rc=1）。改为两态守卫：「证据漂移」（冻结层 manifest 的 engine_head
+  与工具常量不一致）与 porcelain 越界条目仍硬失败；「引擎已演进」改为 stderr 警告 +
+  指向 README 冻结 worktree 配方后放行（rc=0）。
+- README「复跑步骤」开头补第 0 步冻结 worktree 配方（`git -C <引擎仓> worktree add
+  <dir> 8cfbfe5`，ENGINE_REPO 指向该 worktree、TREE_DIR 仍用真树），并实跑一次；
+  两个演示用 worktree 用毕已移除。
+- 跑记录入 `data/audit/post-commit.md`（新增，指纹豁免）；`tools/fingerprint.py`
+  EXCLUDED 同步扩充，披露 D08 同步改写；README 目录表与门禁说明同步更新。
+
+### 门禁复跑（refine 后实测）
+
+- `check_engine.py` 三态：冻结 worktree（rc=0，HEAD 一致）/ 干净检出的演进 HEAD
+  58181a5（rc=0，stderr 警告）/ manifest engine_head 毒丸（rc=1 硬失败）。
+  记录见 data/audit/post-commit.md。
+- `fingerprint.py write -> verification.py -> fingerprint.py check`：登记 71 项不变
+  （data/audit/post-commit.md 豁免），check 通过（71 项全部一致，无未登记产物）。
+- svg-linter（recommended 档）8 张面板逐张复跑：rc=0、findings 0（面板未改动，复核性质）。
+- 重建链/真空复跑未重跑：`data/frozen/` 有一次性守卫，且 refine 约束禁引擎构建。
+  `index.html`、`data/rebuild/`、`data/panels/`、`render/*` 本批零改动；指纹除有意
+  修改的 README 与 tools 三件（check_engine.py / fingerprint.py / disclosures.json）
+  外全部不变。
+
+### 缓办（按 refine 授权记录为 deferred，不在本批实施）
+
+- no-claims-binding（med）：44 条声明有 `data/rebuild/page-claims.json` 机检对表（§2），
+  但页面无读者可见「声明 Cxx」徽标/面板脚注/页末声明表。
+- no-sidenote-track（med）：无右侧旁注轨（1008px 块内 680+40+288 网格缺失）。
+- other（low）：无 contract.md（受众分层/形式选择/媒介必要性决策未成文）。
 
