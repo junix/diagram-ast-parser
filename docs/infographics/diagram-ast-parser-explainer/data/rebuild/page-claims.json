@@ -18,14 +18,6 @@
       "panel": "p1-hero"
     },
     {
-      "actual": 4715,
-      "claim": "总行数 4,715",
-      "evidence": "data/rebuild/structure.json#loc.total",
-      "expected": 4715,
-      "ok": true,
-      "panel": "p1-hero"
-    },
-    {
       "actual": 12,
       "claim": "测试通过数 = 集成测试声明数",
       "evidence": "frozen#tests_passed vs structure#tests_declared",
@@ -366,6 +358,6 @@
       "panel": "p8-verify"
     }
   ],
-  "count": 44,
+  "count": 43,
   "kind": "page_claims"
 }

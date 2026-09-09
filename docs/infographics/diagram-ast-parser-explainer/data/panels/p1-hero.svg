@@ -45,19 +45,15 @@
 <text x="424.0" y="510.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16" fill="#182841" font-weight="600" text-anchor="start">Rust 源文件</text>
 <text x="424.0" y="535.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#75879D" font-weight="400" text-anchor="start">引擎 + 集成测试</text>
 <rect x="760.0" y="436.0" width="340.0" height="118.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
-<text x="784.0" y="480.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="30" fill="#14477E" font-weight="700" text-anchor="start">4,715</text>
-<text x="784.0" y="510.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16" fill="#182841" font-weight="600" text-anchor="start">行 Rust 代码</text>
-<text x="784.0" y="535.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#75879D" font-weight="400" text-anchor="start">其中引擎 4,587 行</text>
+<text x="784.0" y="480.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="30" fill="#14477E" font-weight="700" text-anchor="start">12</text>
+<text x="784.0" y="510.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16" fill="#182841" font-weight="600" text-anchor="start">测试全部通过</text>
+<text x="784.0" y="535.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#75879D" font-weight="400" text-anchor="start">一次性实测 10.1 秒</text>
 <rect x="40.0" y="574.0" width="340.0" height="118.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
-<text x="64.0" y="618.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="30" fill="#14477E" font-weight="700" text-anchor="start">12</text>
-<text x="64.0" y="648.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16" fill="#182841" font-weight="600" text-anchor="start">测试全部通过</text>
-<text x="64.0" y="673.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#75879D" font-weight="400" text-anchor="start">一次性实测 10.1 秒</text>
+<text x="64.0" y="618.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="30" fill="#14477E" font-weight="700" text-anchor="start">4</text>
+<text x="64.0" y="648.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16" fill="#182841" font-weight="600" text-anchor="start">依赖全部精确锁版</text>
+<text x="64.0" y="673.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#75879D" font-weight="400" text-anchor="start">clap / serde 系列锁定单版本</text>
 <rect x="400.0" y="574.0" width="340.0" height="118.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
-<text x="424.0" y="618.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="30" fill="#14477E" font-weight="700" text-anchor="start">4</text>
-<text x="424.0" y="648.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16" fill="#182841" font-weight="600" text-anchor="start">依赖全部精确锁版</text>
-<text x="424.0" y="673.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#75879D" font-weight="400" text-anchor="start">clap / serde 系列锁定单版本</text>
-<rect x="760.0" y="574.0" width="340.0" height="118.0" rx="12" fill="#F7FAFE" stroke="#D5DFEB" stroke-width="1"/>
-<text x="784.0" y="618.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="30" fill="#14477E" font-weight="700" text-anchor="start">1.85</text>
-<text x="784.0" y="648.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16" fill="#182841" font-weight="600" text-anchor="start">最低 Rust 版本</text>
-<text x="784.0" y="673.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#75879D" font-weight="400" text-anchor="start">工具链声明与文档一致</text>
+<text x="424.0" y="618.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="30" fill="#14477E" font-weight="700" text-anchor="start">1.85</text>
+<text x="424.0" y="648.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="16" fill="#182841" font-weight="600" text-anchor="start">最低 Rust 版本</text>
+<text x="424.0" y="673.0" font-family="'PingFang SC','Hiragino Sans GB','Helvetica Neue','Arial',sans-serif" font-size="13.5" fill="#75879D" font-weight="400" text-anchor="start">工具链声明与文档一致</text>
 </svg>

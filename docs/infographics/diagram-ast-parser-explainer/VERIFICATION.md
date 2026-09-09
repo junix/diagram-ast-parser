@@ -17,7 +17,6 @@
 |---|---|---|---|---|
 | p1-hero | 7 种解析格式 | `data/rebuild/structure.json#format_modules` | 7 | 7 ✓ |
 | p1-hero | 源文件 23+1 | `data/rebuild/structure.json#rust_source_files/rust_test_files` | "23+1" | "23+1" ✓ |
-| p1-hero | 总行数 4,715 | `data/rebuild/structure.json#loc.total` | 4715 | 4715 ✓ |
 | p1-hero | 测试通过数 = 集成测试声明数 | `frozen#tests_passed vs structure#tests_declared` | 12 | 12 ✓ |
 | p1-hero | 最低 Rust 版本 1.85 | `structure#msrv` | "1.85" | "1.85" ✓ |
 | p1-hero | 4 项依赖全部精确锁版 | `structure#dependencies_exact_pinned` | 4 | 4 ✓ |
@@ -60,7 +59,7 @@
 | p8-verify | 构建耗时来自冻结层 | `frozen#build_secs` | 11.16 | 11.16 ✓ |
 | p8-verify | 测试耗时来自冻结层 | `frozen#test_secs` | 10.11 | 10.11 ✓ |
 
-共 44 条声明，全部机检对表通过（True）。
+共 43 条声明，全部机检对表通过（True）。
 
 ## 3. 六禁门禁
 
@@ -72,8 +71,8 @@
 | 2 | `出错位置在语句树第 42 行` | [2] | 咬住 |
 | 3 | `结构定义如下：pub struct ParseOptions { pub max` | [3, 4] | 咬住 |
 | 4 | `根类型是 DbmlDocument 的文档对象` | [4] | 咬住 |
-| 5 | `树构建在 src/parser/tree.rs 中完成` | [1, 4, 5] | 咬住 |
-| 6 | `本页由 build_page.py 生成` | [6] | 咬住 |
+| 5 | `树构建在 src/parser/tree.rs 中完成` | [1, 3, 4, 5] | 咬住 |
+| 6 | `本页由 build_page.py 生成` | [1, 6] | 咬住 |
 
 放行判例与豁免规则见偏差披露 D07。
 
@@ -112,7 +111,7 @@
 | `data/frozen/manifest.txt` | `21dcdf5ead48b50dce87f4aca4f091569e2d607c4c6852484df15ee177c5f6ee` |
 | `data/frozen/test-run.txt` | `fcd11dc11a41d31d81adf34d193c20e31b4989c2d141e27cb93f1de0658886e1` |
 | `data/frozen/vacuum-report.txt` | `aa216035ebb9153bc13335860891c08e877f4e5acdf071a2e566c2930c4d1895` |
-| `data/panels/p1-hero.svg` | `b0ed96a962bd6b8a97e583a555e468ae2e425c0afd92452bd84421fe7765ece5` |
+| `data/panels/p1-hero.svg` | `f5040e9810c91368f684bf433389ee3ad8eff77f9acacfe7c0a2c07b4134a34a` |
 | `data/panels/p2-formats.svg` | `9d5c9869b4550d1a811edf32b10444bd6c8610eacfba633cfd6f8649cc133bad` |
 | `data/panels/p3-pipeline.svg` | `7338f01723306698ebc2f364afd353c4bcfb3135142393aa2f605605a15616f6` |
 | `data/panels/p4-span-error.svg` | `b8ea4466ca3dbd894b41841fcc983b814515ef4ad8b8e7ca0ad0f39cb6986807` |
@@ -123,16 +122,16 @@
 | `data/rebuild/behavior.json` | `624696f0aa93ddcacaeb5be208a001dead97b7a8efd16e9dcc7614c624163477` |
 | `data/rebuild/compat.json` | `3a346a1bdcc6a6c5a306e4fd58bdbd3b6197dd9bb2025aee951f43a07d842de0` |
 | `data/rebuild/formats.json` | `3e62c8e515d1ba6fd6389003da0b1cd1b51e53b3cdca1dc2b1c0d08abf5ed38b` |
-| `data/rebuild/gate-selfcheck.json` | `4b4b0eccdbe94817f7de361da7df37e1bb84d3d522e88d25d29428877712649e` |
+| `data/rebuild/gate-selfcheck.json` | `6c0aa934d764e3134a338f4f0c143cbf0abdb11f87535559a2483cc7502622cc` |
 | `data/rebuild/lint-report.json` | `03d09418e51e520e5c9cae514a172dee0bb78e66be77427c3fd3be97a72e20d3` |
-| `data/rebuild/page-claims.json` | `36043503dfea596a6ea26d4daeaa02cc5d09df09053c760ad67daad80de2ce53` |
+| `data/rebuild/page-claims.json` | `741793e91c7f22cd3b09d143c3b54c0de015609f67012c4bfb88f1efe87fff6e` |
 | `data/rebuild/pipeline.json` | `8a5f49d6d5d7492ff41bee93798b19d147279125cafb8b2e0c446d542f435aed` |
 | `data/rebuild/structure.json` | `701f79f4e155d0e5ab2062545e6210b6906c79a3400bff5698d67ff34e15c889` |
-| `index.html` | `a1a63150fb6f5b349808b9a83cba2947f4188bc3ac98cb40fc31a822fb69faeb` |
-| `render/full@2x.gray.png` | `cba6177e2dcac930621320862a854ace3d2518c14349e8760eddcb5a38b62c8f` |
-| `render/full@2x.png` | `063f249b31e0d7493aeaa85b1875a454e3e1844c67a21bcd3f3f70062d17d2d9` |
+| `index.html` | `d289afe8ed13c3d8939d2e45226c22eddd2380081024b7a3508bc6c21400b2e4` |
+| `render/full@2x.gray.png` | `34cd4d798a512d6ed9282b50686cb1528d7d940959b4b50e38964c450e98e578` |
+| `render/full@2x.png` | `f2e1ddc27b205dc67354047a328113b7bb2637ab9c764b05854001d7f73c488f` |
 | `render/layout.json` | `9c9f7480e8ec3707571fe2a75017c78f9621625fb839bf2632ed04dd68c972d2` |
-| `render/sections/01-p1-hero.png` | `349f81590408bda603e2f3bb7a33a9298c6e525f6b4873974630d6814db7a4ef` |
+| `render/sections/01-p1-hero.png` | `2dd35e5d48015bc68e12b2d67badfdc618cdf260dee3e80164b2d7dcd22badde` |
 | `render/sections/02-p2-formats.png` | `dd0a3f468a969479af0b5c0261c908262a114b9f32454950a00a9b39d39878dc` |
 | `render/sections/03-p3-pipeline.png` | `3c66e2e7a859fd5cdf8bd3e527e8d5c0d345d295edd3033ee735812616b8248e` |
 | `render/sections/04-p4-span-error.png` | `b042af0e4589860a5d8f7e15e91cadfb4a06d0935d35511b8bf100661c0a6bec` |
@@ -140,9 +139,9 @@
 | `render/sections/06-p6-limits.png` | `67ddd0c0e51200119b43fcc1844fd4eeb577566d9ff630a2dbb9cab1a82ed125` |
 | `render/sections/07-p7-compat.png` | `c708294f4ed3952abd8fa9e15a814e712c00defa6c0ca296357e03cf6a7adfd0` |
 | `render/sections/08-p8-verify.png` | `84560d10f210612cea60b4f96e0726a77f9b20fe5b91e83924cf5d0ada9262f9` |
-| `render/thumb.png` | `d619f8f07f93f1747062420f05f7b5bdc8b34b0c0d6430da6a4b0ffa235fafbd` |
+| `render/thumb.png` | `d228d30b419c9ea470a4f0842f5e94ffe3253be33cbe47b70f38d62cb112e726` |
 | `tools/allowlist.json` | `47836582936eed88d10ff8c4389550e1f5fe996aea2cff162b0cf9ca836f26d9` |
-| `tools/build_page.py` | `844eac3ebb8ec1f10efb02b2e4578a3c3bde6b17a5505ff232e556034b1eff59` |
+| `tools/build_page.py` | `d960aa5a4a1d44fdb0e79872507a5ddb0a07e241bc40b8a54262945630a86f60` |
 | `tools/check_engine.py` | `5a47ce5c77bd4aa8be520928b3e32b81e67d89cf503f56318dcc8cb90eb2d131` |
 | `tools/cmp_artifacts.py` | `9732ba57a386a47b3b02eaf61c0e8cdc2874e58c987efc125fda50d918735aaf` |
 | `tools/disclosures.json` | `0b09b9f95af2acde2ee0086e2cbe4255d2ea0426bd89585d9b95d93420cf7b2d` |
@@ -150,7 +149,7 @@
 | `tools/fingerprint.py` | `2ae27b4ff1dd020d8bd78c5af163747d038ac8859d7ab205def42d489b01da8a` |
 | `tools/freeze_once.sh` | `83d1e2a8cc76f7e13a690b1727e7e990d7e230d3928614b39b13169e14387e82` |
 | `tools/gate_check.py` | `fee9defe2e7cd9176f64d62fc8700462684b0277611cc14ea4d804c775d54819` |
-| `tools/panels.py` | `51f970b633412c20fc48624e4f08eded2e45cc8112278158589dbf1541194f5b` |
+| `tools/panels.py` | `ae16aab7cd2c94ab7ba96ce3be86e35090b062561a494ab9627c2e3c99015545` |
 | `tools/parse_freeze.py` | `9642c2776f77c10215e1fdf783c1c50e01e5653821311722e16febd886cc07ff` |
 | `tools/probe_behavior.py` | `f136895b886522d10018a9cda82ef4dadf0c91b00528cac4f45c58b752a7e30b` |
 | `tools/rebuild_chain.sh` | `b5ec28f5c11031c50b0f6fec111de286a58d4ccd3d07304987aa57da7076772e` |
@@ -238,3 +237,39 @@ cmp_artifacts: 两树产物等价（判据内一致）
 - no-sidenote-track（med）：无右侧旁注轨（1008px 块内 680+40+288 网格缺失）。
 - other（low）：无 contract.md（受众分层/形式选择/媒介必要性决策未成文）。
 
+## 9. 2026-09-09 reader-pass（hero 盘点退出阅读动线）
+
+依据 create-explainer §4.5 读者面规则（fleet reader-pass Wave 2d-2；试点 stream-md
+e122a1c、先例 md-doctor b3fdd84 同配方）。目标：hero 可见盘点数字退出阅读动线；
+本树为 SVG 面板页（无 details 折叠能力），按配方走「删砖」路线。
+
+### 9.1 改动清单（tools/panels.py + tools/build_page.py）
+
+1. p1-hero 的 KPI 网格 6 砖 → 5 砖：删除「4,715 行 Rust 代码（其中引擎 4,587 行）」
+   整枚普查砖（行数属盘点 KPI）；其余五砖（7 格式 / 23+1 源文件 / 12 测试通过 /
+   4 依赖锁版 / MSRV 1.85）字节不动、原序左移补位。
+2. build_page.py 声明对表联动删除「总行数 4,715」一条（页面已不展示该数字，
+   断言随之消失；行数证据仍在 data/rebuild/structure.json#loc，未降证据层）。
+3. 面板高度与页面高度不变（1200×7310 CSS px），渲染断言口径不变。
+
+### 9.2 门禁旧→新
+
+| 门禁 | 旧 | 新 |
+|---|---|---|
+| 声明对表 | 44 条全对表 | 43 条全对表 |
+| 六禁门禁 | 0 违规 + 对照 6/6 | 0 违规 + 对照 6/6 |
+| SVG 静态检查 | 8 张 0 findings | 8 张 0 findings |
+| CDP 渲染 | 8 片滚动断言全过 | 8 片滚动断言全过 |
+| 指纹登记 | 71 项 | 71 项（write 后 check 全绿） |
+
+注：gate-selfcheck.json 的投毒样本实时取自引擎仓 HEAD，HEAD 自冻结后演进的
+README/justfile 提交使部分样本的 caught_cats 明细多咬 1–2 类（更严不更松），
+期望类别 6/6 判定不变。
+
+### 9.3 冻结层与重跑口径
+
+- data/frozen/ 23 个文件改前改后 shasum 全量比对一致（零改动）。
+- 重跑范围：panels → build_page → render → stitch → fingerprint write →
+  verification（工具层改动触发的确定性重推导；probe/冻结层未触碰）。
+- 快照已按新版页面重拍（full@2x / 灰度 / thumb / 01-p1-hero 分节图更新；
+  页高不变）。§8 为上批 refine 人工追加节，verification.py 重生成后原样回贴。

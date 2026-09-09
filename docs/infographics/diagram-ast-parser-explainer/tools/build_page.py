@@ -58,9 +58,6 @@ def verify_claims() -> list[dict]:
     claim("p1-hero", "源文件 23+1",
           "data/rebuild/structure.json#rust_source_files/rust_test_files",
           "23+1", f'{structure["rust_source_files"]}+{structure["rust_test_files"]}')
-    claim("p1-hero", f'总行数 {structure["loc"]["total"]:,}',
-          "data/rebuild/structure.json#loc.total",
-          structure["loc"]["total"], structure["loc"]["total"])
     claim("p1-hero", "测试通过数 = 集成测试声明数",
           "frozen#tests_passed vs structure#tests_declared",
           structure["tests_declared"], frozen["tests_passed"])

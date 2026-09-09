@@ -35,7 +35,6 @@ formats = load("data/rebuild/formats.json")
 frozen = load("data/frozen/build-summary.json")
 
 F = formats["formats"]
-LOCS = structure["loc"]
 OUT = os.path.join(TREE, "data", "panels")
 os.makedirs(OUT, exist_ok=True)
 
@@ -94,7 +93,6 @@ def p1() -> None:
     facts = [
         ("7", "解析格式", "一套入口统一调度"),
         (f'{structure["rust_source_files"]}+{structure["rust_test_files"]}', "Rust 源文件", "引擎 + 集成测试"),
-        (f'{LOCS["total"]:,}', "行 Rust 代码", f'其中引擎 {LOCS["src_total"]:,} 行'),
         (f'{frozen["tests_passed"]}', "测试全部通过", f'一次性实测 {frozen["test_secs"]:.1f} 秒'),
         (f'{structure["dependencies_exact_pinned"]}', "依赖全部精确锁版", "clap / serde 系列锁定单版本"),
         ("1.85", "最低 Rust 版本", "工具链声明与文档一致"),
