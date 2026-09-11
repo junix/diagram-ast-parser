@@ -16,3 +16,6 @@ Cargo.lock
 /docs/infographics/diagram-ast-parser-explainer/render/sections/06-p6-limits.png
 /docs/infographics/diagram-ast-parser-explainer/render/sections/07-p7-compat.png
 /docs/infographics/diagram-ast-parser-explainer/render/sections/08-p8-verify.png
+
+# Generated caches, render slices, and numbered lint images (keep final PNG/PDF).
+/docs/infographics/diagram-ast-parser-explainer/render/sections/**/*.png
