@@ -16,6 +16,5 @@ test:
 
 install: build
     mkdir -p "{{ install_bin }}"
-    cp "{{ target_dir }}/release/diagram-parse" "{{ install_bin }}/diagram-parse"
-    chmod +x "{{ install_bin }}/diagram-parse"
+    @set -eu; dest="{{ install_bin }}/diagram-parse"; mkdir -p "$(dirname "$dest")"; tmp="$(mktemp "{{ install_bin }}/.diagram-parse.XXXXXX")"; trap 'rm -f "$tmp"' EXIT; cp "{{ target_dir }}/release/diagram-parse" "$tmp"; chmod 755 "$tmp"; if [ "$(uname -s)" = "Darwin" ]; then xattr -c "$tmp" 2>/dev/null || true; codesign --force --sign - "$tmp"; fi; mv -f "$tmp" "$dest"
     echo "Installed {{ install_bin }}/diagram-parse"
