@@ -11,7 +11,12 @@ use std::{
 #[derive(Debug, Parser)]
 #[command(name = "diagram-parse")]
 #[command(about = "Parse diagram DSL input and emit a JSON AST")]
+#[command(version = version(), disable_version_flag = true)]
 struct Cli {
+    /// Print version information and exit.
+    #[arg(short = 'v', long = "version", action = clap::ArgAction::Version)]
+    version: (),
+
     /// Input format: auto, dbml, wavedrom, d2, structurizr, likec4, nomnoml, or pikchr.
     #[arg(short, long, default_value = "auto")]
     format: String,
@@ -34,6 +39,18 @@ struct Cli {
     /// Maximum nested braced-block depth for brace-based DSL parsers.
     #[arg(long, default_value_t = 128)]
     max_depth: usize,
+}
+
+/// Version with build stamp (ADR-1168): `PM_BUILD_SHA` is exported by the
+/// justfile build (git short sha, `.dirty` suffix on a dirty tree). Leaked to
+/// satisfy clap's `&'static str` version setter.
+fn version() -> &'static str {
+    match option_env!("PM_BUILD_SHA") {
+        Some(stamp) => {
+            Box::leak(format!("{}+{}", env!("CARGO_PKG_VERSION"), stamp).into_boxed_str())
+        }
+        None => env!("CARGO_PKG_VERSION"),
+    }
 }
 
 fn main() -> ExitCode {

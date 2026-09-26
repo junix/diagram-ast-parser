@@ -1,5 +1,9 @@
 set shell := ["bash", "-euo", "pipefail", "-c"]
 
+# ADR-1168 build stamp: git short sha, ".dirty" when the worktree is dirty.
+stamp := `git rev-parse --short HEAD` + `(git diff --quiet && git diff --cached --quiet) >/dev/null 2>&1 || printf .dirty`
+export PM_BUILD_SHA := "g" + stamp
+
 os_name := if os() == "macos" { "macos" } else { "linux" }
 arch_name := if arch() == "aarch64" { "arm64" } else { "x86" }
 default_install_bin := home_directory() / "sync" / (os_name + "-" + arch_name + "-bin")
