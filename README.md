@@ -126,7 +126,7 @@ input
   +-- nomnoml ---------------- balanced classifier scanner
 ```
 
-The lexer supports single, double, triple, and DBML backtick strings where appropriate; line/block comments are selected per language. It rejects unbalanced delimiters and enforces a configurable depth limit for the brace-based parsers. `max_nesting_depth` does not currently constrain JSON5 nesting in WaveDrom or nested classifier text in nomnoml.
+The lexer supports single, double, triple, and DBML backtick strings where appropriate; line/block comments are selected per language. The shared statement parser rejects unbalanced or crossed brackets and parentheses, without treating quoted text or comments as structural delimiters. For the brace-based parsers, `max_nesting_depth` bounds the sum of enclosing braced statement blocks and currently open brackets/parentheses in a statement head. A limit of zero allows only unnested statements. Braces within bracket/parenthesis expressions remain expression tokens, not statement blocks. `max_nesting_depth` does not currently constrain JSON5 nesting in WaveDrom or nested classifier text in nomnoml.
 
 ## Compatibility matrix
 

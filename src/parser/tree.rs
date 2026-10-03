@@ -11,6 +11,12 @@ pub(crate) struct RawStatement {
     pub body: Option<Vec<RawStatement>>,
 }
 
+#[derive(Clone, Copy, PartialEq, Eq)]
+enum ExpressionDelimiter {
+    Bracket,
+    Parenthesis,
+}
+
 pub(crate) fn parse_braced_tree(
     format: Format,
     source: &str,
@@ -102,8 +108,7 @@ impl TreeParser<'_> {
             .start;
         let mut head = Vec::new();
         let mut body = None;
-        let mut square_depth = 0usize;
-        let mut paren_depth = 0usize;
+        let mut delimiters = Vec::new();
         let mut end = start;
 
         loop {
@@ -111,7 +116,7 @@ impl TreeParser<'_> {
                 break;
             };
 
-            if square_depth == 0 && paren_depth == 0 {
+            if delimiters.is_empty() {
                 if matches!(&token.kind, TokenKind::Newline) || token.is_symbol(";") {
                     self.position += 1;
                     break;
@@ -162,30 +167,56 @@ impl TreeParser<'_> {
                 }
             }
 
-            if token.is_symbol("[") {
-                square_depth += 1;
-            } else if token.is_symbol("]") {
-                if square_depth == 0 {
-                    return Err(ParseError::at(
-                        self.format,
-                        "unmatched closing bracket",
-                        token.span,
-                        self.source,
-                    ));
-                }
-                square_depth -= 1;
+            let opening = if token.is_symbol("[") {
+                Some(ExpressionDelimiter::Bracket)
             } else if token.is_symbol("(") {
-                paren_depth += 1;
-            } else if token.is_symbol(")") {
-                if paren_depth == 0 {
+                Some(ExpressionDelimiter::Parenthesis)
+            } else {
+                None
+            };
+            if let Some(opening) = opening {
+                // The active expression shares the enclosing blocks' depth budget.
+                if delimiters.len() >= self.max_depth.saturating_sub(depth) {
                     return Err(ParseError::at(
                         self.format,
-                        "unmatched closing parenthesis",
+                        format!(
+                            "nesting depth exceeds configured limit of {}",
+                            self.max_depth
+                        ),
                         token.span,
                         self.source,
                     ));
                 }
-                paren_depth -= 1;
+                delimiters.push(opening);
+            } else if token.is_symbol("]") || token.is_symbol(")") {
+                let Some(opening) = delimiters.pop() else {
+                    let message = if token.is_symbol("]") {
+                        "unmatched closing bracket"
+                    } else {
+                        "unmatched closing parenthesis"
+                    };
+                    return Err(ParseError::at(
+                        self.format,
+                        message,
+                        token.span,
+                        self.source,
+                    ));
+                };
+                let expected = match opening {
+                    ExpressionDelimiter::Bracket => "]",
+                    ExpressionDelimiter::Parenthesis => ")",
+                };
+                if !token.is_symbol(expected) {
+                    return Err(ParseError::at(
+                        self.format,
+                        format!(
+                            "mismatched closing delimiter `{}`: expected `{expected}`",
+                            token.text()
+                        ),
+                        token.span,
+                        self.source,
+                    ));
+                }
             }
 
             end = token.span.end;
@@ -193,7 +224,7 @@ impl TreeParser<'_> {
             self.position += 1;
         }
 
-        if square_depth != 0 {
+        if delimiters.contains(&ExpressionDelimiter::Bracket) {
             return Err(ParseError::at(
                 self.format,
                 "unterminated bracket expression",
@@ -201,7 +232,7 @@ impl TreeParser<'_> {
                 self.source,
             ));
         }
-        if paren_depth != 0 {
+        if !delimiters.is_empty() {
             return Err(ParseError::at(
                 self.format,
                 "unterminated parenthesized expression",
