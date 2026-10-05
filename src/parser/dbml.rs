@@ -252,6 +252,14 @@ fn parse_table_item(statement: &RawStatement, source: &str) -> ParseResult<DbmlT
 }
 
 fn parse_column(statement: &RawStatement, source: &str) -> ParseResult<DbmlColumn> {
+    if statement.body.is_some() {
+        return Err(ParseError::at(
+            Format::Dbml,
+            "column must not have a braced body",
+            statement.span,
+            source,
+        ));
+    }
     let name = statement.head.first().map(token_value).ok_or_else(|| {
         ParseError::at(
             Format::Dbml,
@@ -361,6 +369,22 @@ fn parse_ref(statement: &RawStatement, source: &str) -> ParseResult<DbmlRef> {
                 source,
             )
         })?;
+        if let Some(extra) = body.get(1) {
+            return Err(ParseError::at(
+                Format::Dbml,
+                "Ref block must contain exactly one relationship",
+                extra.span,
+                source,
+            ));
+        }
+        if child.body.is_some() {
+            return Err(ParseError::at(
+                Format::Dbml,
+                "Ref relationship must not have a braced body",
+                child.span,
+                source,
+            ));
+        }
         child.head.clone()
     } else {
         statement.head[1..].to_vec()
@@ -507,11 +531,21 @@ fn parse_named_header<'a>(
             source,
         ));
     }
-    let settings_start = find_trailing_settings_start(tokens);
-    let main_end = settings_start.unwrap_or(tokens.len());
+    let mut settings_start = find_trailing_settings_start(tokens);
+    let mut main_end = settings_start.unwrap_or(tokens.len());
     let alias_index = tokens[..main_end]
         .iter()
         .position(|token| token.is_bare("as"));
+    // Empty brackets after an alias are no-op table settings, not an array suffix.
+    // Keep the shared settings helper's array-type behavior unchanged for columns.
+    if alias_index.is_some()
+        && tokens.len() >= 2
+        && tokens[tokens.len() - 2].is_symbol("[")
+        && tokens[tokens.len() - 1].is_symbol("]")
+    {
+        main_end = tokens.len() - 2;
+        settings_start = Some(main_end);
+    }
     let name_end = alias_index.unwrap_or(main_end);
     let name_tokens = &tokens[..name_end];
     if name_tokens.is_empty() {
@@ -522,17 +556,28 @@ fn parse_named_header<'a>(
             source,
         ));
     }
-    let alias = alias_index
-        .and_then(|index| tokens.get(index + 1))
-        .map(token_value);
-    if alias_index.is_some() && alias.is_none() {
-        return Err(ParseError::new(
-            Format::Dbml,
-            "`as` requires a table alias",
-            None,
-            source,
-        ));
-    }
+    let alias = if let Some(index) = alias_index {
+        let alias_tokens = &tokens[index + 1..main_end];
+        if alias_tokens.is_empty() {
+            return Err(ParseError::at(
+                Format::Dbml,
+                "`as` requires a table alias",
+                tokens[index].span,
+                source,
+            ));
+        }
+        if let Some(extra) = alias_tokens.get(1) {
+            return Err(ParseError::at(
+                Format::Dbml,
+                "unexpected token after table alias",
+                extra.span,
+                source,
+            ));
+        }
+        Some(token_value(&alias_tokens[0]))
+    } else {
+        None
+    };
     let settings = settings_start
         .map(|index| parse_settings(&tokens[index..], source))
         .transpose()?
