@@ -22,7 +22,7 @@ pub(crate) fn parse_document(
             source,
         )),
         Format::Dbml => dbml::parse(source, options).map(Document::Dbml),
-        Format::WaveDrom => wavedrom::parse(source).map(Document::WaveDrom),
+        Format::WaveDrom => wavedrom::parse(source, options).map(Document::WaveDrom),
         Format::D2 => d2::parse(source, options).map(Document::D2),
         Format::Structurizr => structurizr::parse(source, options).map(Document::Structurizr),
         Format::LikeC4 => likec4::parse(source, options).map(Document::LikeC4),

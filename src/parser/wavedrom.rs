@@ -3,11 +3,14 @@ use crate::{
         WaveDromDocument, WaveGroup, WaveHeaderFooter, WaveLane, WaveRegisterDiagram,
         WaveRegisterField, WaveSignalItem, WaveTimingDiagram,
     },
-    Format, ParseError, ParseResult, Span,
+    Format, ParseError, ParseOptions, ParseResult, Span,
 };
 use serde_json::{Map, Value};
+use std::{iter::Peekable, str::Chars};
 
-pub(crate) fn parse(source: &str) -> ParseResult<WaveDromDocument> {
+pub(crate) fn parse(source: &str, options: &ParseOptions) -> ParseResult<WaveDromDocument> {
+    check_nesting_depth(source, options.max_nesting_depth)?;
+
     let value: Value = serde_json5::from_str(source).map_err(|error| {
         ParseError::new(
             Format::WaveDrom,
@@ -328,5 +331,64 @@ fn take_optional_integer(
             None,
             source,
         )),
+    }
+}
+
+/// Screens the raw bracket nesting before the JSON5 stage, whose recursive
+/// descent has no depth budget of its own. Brackets inside strings and
+/// comments do not count toward the limit.
+fn check_nesting_depth(source: &str, max_depth: usize) -> ParseResult<()> {
+    let mut depth = 0usize;
+    let mut chars = source.chars().peekable();
+    while let Some(ch) = chars.next() {
+        match ch {
+            '\'' | '"' => skip_string(&mut chars, ch),
+            '/' if chars.peek() == Some(&'/') => skip_line_comment(&mut chars),
+            '/' if chars.peek() == Some(&'*') => skip_block_comment(&mut chars),
+            '[' | '{' => {
+                depth += 1;
+                if depth > max_depth {
+                    return Err(ParseError::new(
+                        Format::WaveDrom,
+                        format!("nesting depth exceeds configured limit of {max_depth}"),
+                        None,
+                        source,
+                    ));
+                }
+            }
+            ']' | '}' => depth = depth.saturating_sub(1),
+            _ => {}
+        }
+    }
+    Ok(())
+}
+
+fn skip_string(chars: &mut Peekable<Chars<'_>>, quote: char) {
+    while let Some(ch) = chars.next() {
+        if ch == '\\' {
+            chars.next();
+        } else if ch == quote {
+            return;
+        }
+    }
+}
+
+fn skip_line_comment(chars: &mut Peekable<Chars<'_>>) {
+    chars.next();
+    for ch in chars.by_ref() {
+        if ch == '\n' {
+            return;
+        }
+    }
+}
+
+fn skip_block_comment(chars: &mut Peekable<Chars<'_>>) {
+    chars.next();
+    let mut previous = char::MAX;
+    for ch in chars.by_ref() {
+        if previous == '*' && ch == '/' {
+            return;
+        }
+        previous = ch;
     }
 }

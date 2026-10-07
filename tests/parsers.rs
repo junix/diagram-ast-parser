@@ -126,3 +126,73 @@ fn rejects_invalid_wavedrom_register_width() {
         parse(Format::WaveDrom, source).expect_err("negative register width must be rejected");
     assert!(error.message.contains("unsigned integer"));
 }
+
+#[test]
+fn wavedrom_enforces_configured_nesting_limit() {
+    use diagram_ast_parser::{parse_with_options, ParseOptions};
+
+    let options = ParseOptions {
+        max_input_bytes: 1024,
+        max_nesting_depth: 3,
+    };
+
+    // Root object (1) + signal array (2) + one group array (3) sits exactly at
+    // the limit.
+    let at_limit = "{ signal: [['a']] }";
+    parse_with_options(Format::WaveDrom, at_limit, &options)
+        .expect("nesting equal to the limit must parse");
+
+    // One more group array reaches depth 4.
+    let beyond_limit = "{ signal: [['a', ['b']]] }";
+    let error = parse_with_options(Format::WaveDrom, beyond_limit, &options)
+        .expect_err("nesting beyond the limit must be rejected");
+    assert!(error
+        .message
+        .contains("nesting depth exceeds configured limit of 3"));
+}
+
+#[test]
+fn wavedrom_nesting_limit_ignores_brackets_in_strings_and_comments() {
+    use diagram_ast_parser::{parse_with_options, ParseOptions};
+
+    let source = "{ signal: [\n  // brackets [[[[ inside a comment do not count\n  { name: 'clk', wave: 'p...', data: 'x[[0]], y[1]' }\n] }";
+    let options = ParseOptions {
+        max_input_bytes: 1024,
+        max_nesting_depth: 3,
+    };
+    parse_with_options(Format::WaveDrom, source, &options)
+        .expect("brackets inside strings and comments must not count");
+}
+
+#[test]
+fn wavedrom_default_nesting_limit_bounds_group_recursion() {
+    fn nested_groups(count: usize) -> String {
+        let mut source = String::from("{ signal: [");
+        for _ in 0..count {
+            source.push_str("['g', ");
+        }
+        for _ in 0..count {
+            source.push(']');
+        }
+        source.push_str("]}");
+        source
+    }
+
+    // 126 nested groups reach depth 128, the default budget.
+    parse(Format::WaveDrom, &nested_groups(126))
+        .expect("nesting equal to the default limit must parse");
+
+    let error = parse(Format::WaveDrom, &nested_groups(127))
+        .expect_err("nesting beyond the default limit must be rejected");
+    assert!(error
+        .message
+        .contains("nesting depth exceeds configured limit of 128"));
+}
+
+#[test]
+fn wavedrom_nesting_limit_preserves_json5_errors() {
+    let source = "{ signal: [{ name: 'clk', wave: 'p..' }, }";
+    let error =
+        parse(Format::WaveDrom, source).expect_err("malformed JSON5 must still be rejected");
+    assert!(error.message.contains("invalid WaveJSON/JSON5"));
+}
