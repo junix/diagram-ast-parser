@@ -2,6 +2,10 @@
 
 A Rust library and CLI that parse seven text-to-diagram formats into serializable, format-specific ASTs:
 
+## Examples
+
+All examples are collected in **[gallery.html](gallery.html)** (regenerate with `just rust-gallery`).
+
 - DBML
 - WaveDrom / WaveJSON
 - D2

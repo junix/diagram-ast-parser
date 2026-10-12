@@ -1,0 +1,65 @@
+{
+  "title": "diagram-ast-parser",
+  "tagline": "One parser, seven diagram DSLs: every example source with the JSON AST the crate actually emits. This crate is parser-only; the architecture card also shows the upstream D2 engine rendering its source.",
+  "rebuild": "just rust-gallery",
+  "backdrop": "checker",
+  "items": [
+    {
+      "id": "schema",
+      "title": "Core commerce schema (DBML)",
+      "group": "Parsed examples",
+      "tags": ["dbml"],
+      "sources": ["examples/schema.dbml"],
+      "code": [{"label": "AST JSON", "src": "out/schema.ast.json"}]
+    },
+    {
+      "id": "timing",
+      "title": "Bus transaction waveform (WaveDrom)",
+      "group": "Parsed examples",
+      "tags": ["wavedrom", "json5"],
+      "sources": ["examples/timing.json5"],
+      "code": [{"label": "AST JSON", "src": "out/timing.ast.json"}]
+    },
+    {
+      "id": "architecture",
+      "title": "Payments architecture (D2)",
+      "group": "Parsed examples",
+      "tags": ["d2"],
+      "sources": ["examples/architecture.d2"],
+      "previews": [{"src": "out/architecture.svg", "label": "Rendered by upstream d2"}],
+      "code": [{"label": "AST JSON", "src": "out/architecture.ast.json"}]
+    },
+    {
+      "id": "workspace",
+      "title": "Payments workspace, context + containers (Structurizr)",
+      "group": "Parsed examples",
+      "tags": ["structurizr"],
+      "sources": ["examples/workspace.dsl"],
+      "code": [{"label": "AST JSON", "src": "out/workspace.ast.json"}]
+    },
+    {
+      "id": "model",
+      "title": "Cloud component model (LikeC4)",
+      "group": "Parsed examples",
+      "tags": ["likec4", "c4"],
+      "sources": ["examples/model.c4"],
+      "code": [{"label": "AST JSON", "src": "out/model.ast.json"}]
+    },
+    {
+      "id": "classes",
+      "title": "Service classifiers (nomnoml)",
+      "group": "Parsed examples",
+      "tags": ["nomnoml"],
+      "sources": ["examples/classes.nomnoml"],
+      "code": [{"label": "AST JSON", "src": "out/classes.ast.json"}]
+    },
+    {
+      "id": "flow",
+      "title": "Client to API to database flow (Pikchr)",
+      "group": "Parsed examples",
+      "tags": ["pikchr"],
+      "sources": ["examples/flow.pikchr"],
+      "code": [{"label": "AST JSON", "src": "out/flow.ast.json"}]
+    }
+  ]
+}

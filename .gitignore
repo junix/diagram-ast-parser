@@ -17,3 +17,4 @@ docs/infographics/**/*.lint.png
 
 # Hidden files/dirs untracked by sweep on 2026-09-24
 .githooks/pre-commit
+out/
